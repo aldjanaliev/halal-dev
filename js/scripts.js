@@ -272,7 +272,58 @@ $(document).ready(function () {
 		$(this).css('display','none')
 	})
 
+	// compare sliders
+	$('.compare_slider-main').slick({
+		dots: false,
+		arrows: true,
+		infinite: false, 
+		draggable: false,
+		slidesToShow: 3,
+		asNavFor: '.compare_slider-nav',
+		responsive: [{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 2,
+			}
+		}]
+	})
+
+	$('.compare_slider-nav').slick({
+		dots: false,
+		infinite: false, 
+		arrows: false,
+		slidesToShow: 3,
+		asNavFor: '.compare_slider-main',
+		draggable: false,
+		swipe: false,
+		responsive: [{
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 2,
+			}
+		}]
+	})
+
+	// compare menu fixed on scroll
+	var offset = $('.compare_slider-wrap').offset().top;
+	$(window).scroll(function() {
+		var scroll = $(window).scrollTop()
+		// var offset = $('#slider-fixed').offset().top + $('.catalog-item__image').eq(0).height();
+	 
+		if (scroll > offset) {
+			$('.section--compare').addClass('active')
+			$('.compare_slider-wrap').addClass('active')
+			$('#slider-fixed .catalog-item__information').slideUp(300)			
+		} else{
+			$('.section--compare').removeClass('active')
+			$('.compare_slider-wrap').removeClass('active')
+			$('#slider-fixed .catalog-item__information').slideDown(300)
+		}
+	});
+
 });
+
+
 
 
 
