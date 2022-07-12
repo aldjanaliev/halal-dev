@@ -4815,11 +4815,9 @@ select:disabled {
 				}
 			}
 			&__add{
-				.catalog-item__image{
-					background: $green;
-				}
 				.item_add-link{
 					display: flex;
+					background: $green;
 					height: 100%;
 					width: 100%;
 					justify-content: center;

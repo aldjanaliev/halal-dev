@@ -5558,14 +5558,11 @@ select:disabled {
   }
 }
 
-.compare_slider-main .catalog-item__add .catalog-item__image {
-  background: #00AF70;
-}
-
 .compare_slider-main .catalog-item__add .item_add-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: #00AF70;
   height: 100%;
   width: 100%;
   -webkit-box-pack: center;
