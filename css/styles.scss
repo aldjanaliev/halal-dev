@@ -520,7 +520,73 @@ header {
     @include breakpoint($maxWidth: 992px) {
       margin-right: 0;
     }
+		
   }
+
+	&__currience{
+		position: relative;
+		width: 120px;
+		margin-right: 40px;
+		height: 30px;
+		font-weight: 700;
+    @include breakpoint($maxWidth: 992px) {
+			height: 40px;
+			margin-right: 0;
+		}
+    @include breakpoint($maxWidth: 566px) {
+			margin-left: -20px;
+		}
+		.currience{
+			height: 40px;
+			&-choose__left{
+				left: 0;
+				right: auto;
+				@include breakpoint($maxWidth: 992px) {
+					width: 74px;
+				}
+			}
+			&-choose__right{
+				min-width: 30px;
+				@include breakpoint($maxWidth: 992px) {
+					width: 46px;
+				}
+			}
+			&-choose{
+				border: none;
+				color: #fff;
+				padding-right: 0;
+				@include breakpoint($maxWidth: 992px) {
+					background: #252322;
+				}
+			}
+			&_title{
+				padding: 3px 18px 0 6px;
+				@include breakpoint($maxWidth: 992px) {
+					padding-top: 10px;
+					height: 100%;
+					text-align: center;
+					padding-right: 6px;
+				}
+				&::before{
+					width: 11px;
+					height: 12px;
+					border: none;
+					background: url(../images/arrow-top-select.svg) 100% 50% no-repeat;
+					right: 0;
+					top: 50%;
+					margin-top: -6px;
+				}
+			}
+			&_item{
+				padding: 7px 6px 3px;
+				@include breakpoint($maxWidth: 992px) {
+					background: #201e1d;
+					text-align: center;
+					padding-bottom: 7px;
+				}
+			}
+		}
+	}
 
   // .header-content__left
 
@@ -1653,7 +1719,7 @@ transition: 0.5s;
 
     .icon {
       position: relative;
-      bottom: -2px;
+      bottom: 0;
 
       img {
         width: 26px;
@@ -1706,8 +1772,27 @@ transition: 0.5s;
   // .catalog-item__cost
 
   &__cost {
-    display: flex;
+    display: inline-block;
+		padding-right: 58px;
     margin-bottom: 26px;
+		position: relative;
+		.currience{
+			&-choose{
+				border-color: $green;
+				color: $green;
+				background: #fff;
+			}
+			&_title{
+				padding: 0 3px;
+				&::before{
+					top: 7px;
+					border-color: $green transparent transparent transparent;
+				}
+			}
+			&_item{
+				padding: 0 3px;
+			}
+		}
 
     @include breakpoint($maxWidth: 992px) {
       margin-bottom: 16px;
@@ -3556,6 +3641,18 @@ select:disabled {
 			min-height: 390px;
 		}
 	}
+	& &-main{
+		.slick-dots li button{
+			width: 20px;
+			height: 20px;
+			border-width: 3px;
+			@include breakpoint($maxWidth: 768px) {
+				width: 12px;
+				height: 12px;
+				border-width: 2px;
+			}
+		}
+	}
 	.section-image{
 		@include breakpoint($maxWidth: 768px) {
 			bottom: auto;
@@ -3579,6 +3676,10 @@ select:disabled {
 	.section{
 		padding: 0 0 60px;
 	}
+
+	&-section .catalog_in-slider .slick-dots{
+		justify-content: center;
+	}
 	.btn_back{
 		a{
 			color: #fff;
@@ -3589,7 +3690,7 @@ select:disabled {
 			background: url(../images/arrow-green.svg) left center no-repeat;
 			transition: 0.3s;
 			&:hover{
-				color: $green;
+				color: #B5B5B5;
 			}
 		}
 		@include breakpoint($maxWidth: 768px) {
@@ -3611,7 +3712,7 @@ select:disabled {
 			left: 10px;
 			background: #00CD83;
 			border-radius: 50px;
-			line-height: 26px;
+			line-height: 28px;
 			height: 26px;
 			font-size: 14px;
 			padding: 0 10px 0 30px;
@@ -3626,8 +3727,7 @@ select:disabled {
 				height: 14px;
 				position: absolute;
 				left: 10px;
-				top: 42%;
-				transform: translateY(-50%);
+				top: 5px;
 				background: url(../images/star-white.svg);
 			}
 		}
@@ -3727,68 +3827,6 @@ select:disabled {
 			}
 		}
 	}
-	.currience-choose{
-		padding-right: 8px;
-		border: 1px solid #fff;
-		border-radius: 4px;
-		position: absolute;
-		right: 0;
-		top: 0;
-		min-width: 55px;
-		@include breakpoint($maxWidth: 768px) {
-			border-color: #252322;
-			background: #fff;
-		}
-	}
-	.currience{
-		font-size: 16px;
-		line-height: 19px;
-		padding: 3px 0;
-		@include breakpoint($maxWidth: 768px) {
-			padding: 0;
-		}
-		&-in{
-			display: flex;
-			flex-direction: column;
-		}
-		&_item{
-			cursor: pointer;
-			padding: 3px 6px;
-			transition: 0.3s;
-			&__active{
-				display: none;
-			}
-			&:hover{
-				color: $green;
-			}
-		}
-		&_title{
-			cursor: pointer;
-			padding: 3px 6px;
-			position: relative;
-			@include breakpoint($maxWidth: 768px) {
-				padding: 3px 6px 1px;
-			}
-			&::before{
-				content: '';
-				position: absolute;
-				width: 0;
-				height: 0;
-				border-style: solid;
-				border-width: 4px 2.5px 0 2.5px;
-				border-color: #fff transparent transparent transparent;
-				top: 10px;
-				right: -4px;
-				transition: 0.3s;
-				@include breakpoint($maxWidth: 768px) {
-					border-color: #252322 transparent transparent transparent;
-				}
-			}
-			&__active::before{
-				transform: rotate(180deg);
-			}
-		}
-	}
 	.btn{
 		padding: 0 60px;
 	}
@@ -3830,23 +3868,19 @@ select:disabled {
 			margin: 0 0 30px 75px;
 		}
 		&:hover{
-			border-bottom-color: transparent;
+			border-bottom-color: $green;
+			color: $green;
 		}
 	}
 	.slick-dots{
 		justify-content: end;
 		li{
 			button{
-				width: 20px;
-				height: 20px;
+				width: 12px;
+				height: 12px;
 				background: #fff;
-				border: 3px solid #fff;
+				border: 2px solid #fff;
 				opacity: 1;
-				@include breakpoint($maxWidth: 990px) {
-					width: 12px;
-					height: 12px;
-					border-width: 2px;
-				}
 			}
 			&.slick-active button{
 				background: #00AF70;
@@ -3871,6 +3905,7 @@ select:disabled {
 	}
 	.section--investments{
 		padding: 160px 0;
+		background-image: url(../images/servise.jpg);
 		@include breakpoint($maxWidth: 990px) {
 			padding: 80px 0;
 		}
@@ -3881,6 +3916,15 @@ select:disabled {
 	.investments{
 		@include breakpoint($maxWidth: 768px) {
 			padding: 35px 25px 0;
+		}
+	}
+	.servise{
+		.btn{
+			max-width: 308px;
+			width: 100%;
+			@include breakpoint($maxWidth: 566px) {
+				max-width: 100%;
+			}
 		}
 	}
 	.catalog_in-slider{
@@ -3894,7 +3938,24 @@ select:disabled {
 			position: absolute;
 			bottom: 20px;
 			left: 0;
+			button{
+				background: #fff;
+			}
 		}
+	}
+	.filter{
+		background: #fff;
+	}
+	.select-wrapper input.select-dropdown,
+	.filter-range{
+		background-color: transparent;
+	}
+	.filter__row{
+		border-left: 1px solid #E9E9E9;
+	}
+	.filter__col{
+		border-top: 1px solid #E9E9E9;
+		border-bottom: 1px solid #E9E9E9;
 	}
 }
 .section_title{
@@ -3982,7 +4043,9 @@ select:disabled {
 			}
 		}
 		&_desc{
-			padding-bottom: 66px;
+			padding-bottom: 33px;
+			border-bottom: 1px solid #EFEFEF;
+			margin-bottom: 33px;
 			@include breakpoint($maxWidth: 768px) {
 				flex-direction: column;
 				padding-bottom: 10px;
@@ -4240,6 +4303,29 @@ select:disabled {
 				font-size: 16px;
 			}
 		}
+	}
+}
+
+.dots-bd,
+.characters{
+	position: relative;
+	&::before,
+	&::after{
+		content: '';
+		position: absolute;
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		top: 50%;
+		background: #EFEFEF;
+	}
+	&::before{
+		transform: translate(-50%, -50%);
+		left: 0;
+	}
+	&::after{
+		transform: translate(50%, -50%);
+		right: 0;
 	}
 }
 .dib{
@@ -5072,6 +5158,71 @@ select:disabled {
 		}
 	}
 }
+.currience-choose{
+	padding-right: 8px;
+	border: 1px solid #fff;
+	border-radius: 4px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	min-width: 55px;
+	font-weight: 600;
+	font-family: $montserrat;
+	@include breakpoint($maxWidth: 768px) {
+		border-color: #252322;
+		background: #fff;
+	}
+}
+.currience{
+	font-size: 16px;
+	line-height: 19px;
+	padding: 3px 0;
+	@include breakpoint($maxWidth: 768px) {
+		padding: 0;
+	}
+	&-in{
+		display: flex;
+		flex-direction: column;
+	}
+	&_item{
+		cursor: pointer;
+		padding: 3px 6px;
+		transition: 0.3s;
+		&__active{
+			display: none;
+		}
+		&:hover{
+			color: $green;
+		}
+	}
+	&_title{
+		cursor: pointer;
+		padding: 3px 6px;
+		position: relative;
+		transition: 0.3s;
+		@include breakpoint($maxWidth: 768px) {
+			padding: 3px 6px 1px;
+		}
+		&::before{
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 4px 2.5px 0 2.5px;
+			border-color: #fff transparent transparent transparent;
+			top: 10px;
+			right: -4px;
+			transition: 0.3s;
+			@include breakpoint($maxWidth: 768px) {
+				border-color: #252322 transparent transparent transparent;
+			}
+		}
+		&__active::before{
+			transform: rotate(180deg);
+		}
+	}
+}
 
 .section--compare{
 	margin-top: -150px;
@@ -5083,5 +5234,12 @@ select:disabled {
 	&.active{
 		background: #fff;
 		padding-top: 50px;
+	}
+}
+.wide{
+	.catalog-item__cost{
+		@include breakpoint($minWidth: 992px) {
+			width: calc(100% - 64px);
+		}
 	}
 }

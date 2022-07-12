@@ -62,21 +62,27 @@
       </div>
       <div class="header-content__right move-1">
 
-        <div class="header-content__selects">
-          <div class="select select--custom">
-            <select class="select2">
-              <option selected>RUS</option>
-              <option>ENG</option>
-            </select>
-          </div>
-          <div class="select select--custom">
-            <select class="select2">
-              <option selected>€</option>
-              <option>₽</option>
-              <option>$</option>
-            </select>
-          </div>
-        </div>
+        <div class="header-content__currience">
+					<div class="currience-choose currience-choose__left">
+						<div class="currience">
+							<div class="currience_title">RUS</div>
+							<div class="currience-in">
+								<span class="currience_item currience_item__active">RUS</span>
+								<span class="currience_item">ENG</span>
+							</div>
+						</div>
+					</div>
+					<div class="currience-choose currience-choose__right">
+						<div class="currience">
+							<div class="currience_title">€</div>
+							<div class="currience-in">
+								<span class="currience_item currience_item__active">€</span>
+								<span class="currience_item">₽</span>
+								<span class="currience_item">$</span>
+							</div>
+						</div>
+					</div>
+				</div>
 
         <div class="contacts-menu">
           <ul>
@@ -116,7 +122,7 @@
   </header>
   <main class="detail">
 
-    <section class="section section--filter">
+    <section class="section section--filter detail-main">
       <div class="section-image">
         <img src="images/img-4.jpg" alt="">
       </div>
@@ -499,7 +505,7 @@
 		
 		<section class="section section--investments">
       <div class="container">
-        <div class="investments">
+        <div class="investments servise">
           <h2 class="white left">Удобства</h2>
           <ul class="investments_list list_dots">
 						<li>Балкон</li>
@@ -557,7 +563,7 @@
 		<section class="section detail-layout">
 			<div class="container">
 				<h5 class="section_title">Планировки</h5>
-				<div class="layout">
+				<div class="layout dots-bd">
 					<div class="layout_main">
 						<div class="layout_slider-main">
 							<div class="layout_slide-main">
@@ -925,434 +931,508 @@
 							<button class="btn">Поиск</button>
 					</div>
 				</div>
-        <div class="catalog-head">
-          <div class="catalog-head__select">
-            <div class="select select--catalog">
-              <select class="select2">
-                <option>Цена по возрастанию</option>
-                <option>Цена по убыванию</option>
-                <option selected>По популярности</option>
-              </select>
-            </div>
-          </div>
-          <div class="catalog-head__view">
-            <a class="view-item active view-item-cards">
-              Карточки
-              <span class="icon">
-                <svg width="27px" height="27px">
-                  <use xlink:href="images/sprite.svg#view-icon-1"></use>
-                </svg>
-              </span>
-            </a>
-            <a class="view-item view-item-list">
-              Список
-              <span class="icon">
-                <svg width="26px" height="21px">
-                  <use xlink:href="images/sprite.svg#view-icon-2"></use>
-                </svg>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="catalog-block show-catalog">
-          <div class="item">
-            <div class="catalog-item">
-              <div class="catalog-item__image">
-                <span class="catalog-item__status"><span class="icon"><img src="images/sale-icon.svg" alt=""></span>Продажа</span>
-								<span class="detail_title-raiting"><span>4.5</span></span>
-                <img src="images/catalog-img.jpg" alt="">
-              </div>
-              <div class="catalog-item__content">
-                <span class="catalog-item__title">Avenue, Дубай</span>
-                <div class="catalog-item__cost">
-                  <div class="catalog-item__price">300 000 - 500 000</div>
-                  <div class="catalog-item__valuta">
-                    <div class="select select--valuta">
-                      <select class="select2">
-                        <option selected>USD</option>
-                        <option>RUB</option>
-                        <option>EUR</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <ul class="catalog-item__information">
-                  <li><span>Строительство:</span>24.21.2024</li>
-                  <li><span>1 спальня:</span>300 000 $</li>
-                  <li><span>2 спальни:</span>400 000 $</li>
-                  <li><span>3 спальни:</span>500 000 $</li>
-                </ul>
-                <span class="catalog-item__comparison">
-                  <a>Добавить к сравнению</a>
-                </span>
-                <div class="catalog-item__bottom">
-                  <div class="catalog-item__contacts">
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#whatsapp-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#telegram-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#mail-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#phone-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                  </div>
-                  <a href="#" class="catalog-item__btn"><img src="images/arrow-right.svg" alt=""></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="catalog-item">
-              <div class="catalog-item__image">
-                <span class="catalog-item__status"><span class="icon"><img src="images/sale-icon.svg" alt=""></span>Продажа</span>
-								<span class="detail_title-raiting"><span>4.5</span></span>
-                <img src="images/catalog-img.jpg" alt="">
-              </div>
-              <div class="catalog-item__content">
-                <span class="catalog-item__title">Avenue, Дубай</span>
-                <div class="catalog-item__cost">
-                  <div class="catalog-item__price">300 000 - 500 000</div>
-                  <div class="catalog-item__valuta">
-                    <div class="select select--valuta">
-                      <select class="select2">
-                        <option selected>USD</option>
-                        <option>RUB</option>
-                        <option>EUR</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <ul class="catalog-item__information">
-                  <li><span>Строительство:</span>24.21.2024</li>
-                  <li><span>1 спальня:</span>300 000 $</li>
-                  <li><span>2 спальни:</span>400 000 $</li>
-                  <li><span>3 спальни:</span>500 000 $</li>
-                </ul>
-                <span class="catalog-item__comparison">
-                  <a>Добавить к сравнению</a>
-                </span>
-                <div class="catalog-item__bottom">
-                  <div class="catalog-item__contacts">
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#whatsapp-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#telegram-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#mail-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#phone-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                  </div>
-                  <a href="#" class="catalog-item__btn"><img src="images/arrow-right.svg" alt=""></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="catalog-item">
-              <div class="catalog-item__image">
-                <span class="catalog-item__status"><span class="icon"><img src="images/sale-icon.svg"
-                      alt=""></span>Продажа</span>
-                <img src="images/catalog-img.jpg" alt="">
-              </div>
-              <div class="catalog-item__content">
-                <span class="catalog-item__title">Avenue, Дубай</span>
-                <div class="catalog-item__cost">
-                  <div class="catalog-item__price">300 000 - 500 000</div>
-                  <div class="catalog-item__valuta">
-                    <div class="select select--valuta">
-                      <select class="select2">
-                        <option selected>USD</option>
-                        <option>RUB</option>
-                        <option>EUR</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <ul class="catalog-item__information">
-                  <li><span>Строительство:</span>24.21.2024</li>
-                  <li><span>1 спальня:</span>300 000 $</li>
-                  <li><span>2 спальни:</span>400 000 $</li>
-                  <li><span>3 спальни:</span>500 000 $</li>
-                </ul>
-                <span class="catalog-item__comparison">
-                  <a>Добавить к сравнению</a>
-                </span>
-                <div class="catalog-item__bottom">
-                  <div class="catalog-item__contacts">
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#whatsapp-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#telegram-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#mail-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#phone-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                  </div>
-                  <a href="#" class="catalog-item__btn"><img src="images/arrow-right.svg" alt=""></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="catalog-item">
-              <div class="catalog-item__image">
-                <span class="catalog-item__status"><span class="icon"><img src="images/sale-icon.svg"
-                      alt=""></span>Продажа</span>
-                <img src="images/catalog-img.jpg" alt="">
-              </div>
-              <div class="catalog-item__content">
-                <span class="catalog-item__title">Avenue, Дубай</span>
-                <div class="catalog-item__cost">
-                  <div class="catalog-item__price">300 000 - 500 000</div>
-                  <div class="catalog-item__valuta">
-                    <div class="select select--valuta">
-                      <select class="select2">
-                        <option selected>USD</option>
-                        <option>RUB</option>
-                        <option>EUR</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <ul class="catalog-item__information">
-                  <li><span>Строительство:</span>24.21.2024</li>
-                  <li><span>1 спальня:</span>300 000 $</li>
-                  <li><span>2 спальни:</span>400 000 $</li>
-                  <li><span>3 спальни:</span>500 000 $</li>
-                </ul>
-                <span class="catalog-item__comparison">
-                  <a>Добавить к сравнению</a>
-                </span>
-                <div class="catalog-item__bottom">
-                  <div class="catalog-item__contacts">
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#whatsapp-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#telegram-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#mail-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#phone-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                  </div>
-                  <a href="#" class="catalog-item__btn"><img src="images/arrow-right.svg" alt=""></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="catalog-item">
-              <div class="catalog-item__image">
-                <span class="catalog-item__status"><span class="icon"><img src="images/sale-icon.svg"
-                      alt=""></span>Продажа</span>
-                <img src="images/catalog-img.jpg" alt="">
-              </div>
-              <div class="catalog-item__content">
-                <span class="catalog-item__title">Avenue, Дубай</span>
-                <div class="catalog-item__cost">
-                  <div class="catalog-item__price">300 000 - 500 000</div>
-                  <div class="catalog-item__valuta">
-                    <div class="select select--valuta">
-                      <select class="select2">
-                        <option selected>USD</option>
-                        <option>RUB</option>
-                        <option>EUR</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <ul class="catalog-item__information">
-                  <li><span>Строительство:</span>24.21.2024</li>
-                  <li><span>1 спальня:</span>300 000 $</li>
-                  <li><span>2 спальни:</span>400 000 $</li>
-                  <li><span>3 спальни:</span>500 000 $</li>
-                </ul>
-                <span class="catalog-item__comparison">
-                  <a>Добавить к сравнению</a>
-                </span>
-                <div class="catalog-item__bottom">
-                  <div class="catalog-item__contacts">
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#whatsapp-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#telegram-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#mail-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#phone-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                  </div>
-                  <a href="#" class="catalog-item__btn"><img src="images/arrow-right.svg" alt=""></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="catalog-item">
-              <div class="catalog-item__image">
-                <span class="catalog-item__status"><span class="icon"><img src="images/sale-icon.svg"
-                      alt=""></span>Продажа</span>
-                <img src="images/catalog-img.jpg" alt="">
-              </div>
-              <div class="catalog-item__content">
-                <span class="catalog-item__title">Avenue, Дубай</span>
-                <div class="catalog-item__cost">
-                  <div class="catalog-item__price">300 000 - 500 000</div>
-                  <div class="catalog-item__valuta">
-                    <div class="select select--valuta">
-                      <select class="select2">
-                        <option selected>USD</option>
-                        <option>RUB</option>
-                        <option>EUR</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <ul class="catalog-item__information">
-                  <li><span>Строительство:</span>24.21.2024</li>
-                  <li><span>1 спальня:</span>300 000 $</li>
-                  <li><span>2 спальни:</span>400 000 $</li>
-                  <li><span>3 спальни:</span>500 000 $</li>
-                </ul>
-                <span class="catalog-item__comparison">
-                  <a>Добавить к сравнению</a>
-                </span>
-                <div class="catalog-item__bottom">
-                  <div class="catalog-item__contacts">
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#whatsapp-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#telegram-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#mail-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#phone-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                  </div>
-                  <a href="#" class="catalog-item__btn"><img src="images/arrow-right.svg" alt=""></a>
-                </div>
-              </div>
-            </div>
-          </div>
+				<div class="catalog-wrap">
+					<div class="catalog-head">
+						<div class="catalog-head__select">
+							<div class="select select--catalog">
+								<select class="select2">
+									<option>Цена по возрастанию</option>
+									<option>Цена по убыванию</option>
+									<option selected>По популярности</option>
+								</select>
+							</div>
+						</div>
+						<div class="catalog-head__view">
+							<a class="view-item active view-item-cards">
+								Карточки
+								<span class="icon">
+									<svg width="27px" height="27px">
+										<use xlink:href="images/sprite.svg#view-icon-1"></use>
+									</svg>
+								</span>
+							</a>
+							<a class="view-item view-item-list">
+								Список
+								<span class="icon">
+									<svg width="26px" height="21px">
+										<use xlink:href="images/sprite.svg#view-icon-2"></use>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</div>
+					<div class="catalog-block show-catalog">
+						<div class="item">
+							<div class="catalog-item">
+								<div class="catalog-item__image">
+									<span class="catalog-item__status"><span class="icon"><img src="images/sale-icon.svg" alt=""></span>Продажа</span>
+									<span class="detail_title-raiting"><span>4.5</span></span>
+									<div class="catalog_in-slider">
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="catalog-item__content">
+									<span class="catalog-item__title">Avenue, Дубай</span>
+									<div class="catalog-item__cost">
+										<div class="catalog-item__price">300 000 - 500 000</div>
+										<div class="currience-choose">
+											<div class="currience">
+												<div class="currience_title">RUB</div>
+												<div class="currience-in">
+													<span class="currience_item currience_item__active">RUB</span>
+													<span class="currience_item">USD</span>
+													<span class="currience_item">EUR</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<ul class="catalog-item__information">
+										<li><span>Строительство:</span>24.21.2024</li>
+										<li><span>1 спальня:</span>300 000 $</li>
+										<li><span>2 спальни:</span>400 000 $</li>
+										<li><span>3 спальни:</span>500 000 $</li>
+									</ul>
+									<span class="catalog-item__comparison">
+									</span>
+									<div class="catalog-item__bottom">
+										<div class="catalog-item__contacts">
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#whatsapp-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#telegram-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#mail-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg>
+														<use xlink:href="images/sprite.svg#phone-icon"></use>
+													</svg>
+												</a>
+											</span>
+										</div>
+										<a href="#" class="catalog-item__btn"><img src="images/arrow-right.svg" alt=""></a>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="catalog-item">
+								<div class="catalog-item__image">
+									<span class="catalog-item__status"><span class="icon"><img src="images/sale-icon.svg" alt=""></span>Продажа</span>
+									<span class="detail_title-raiting"><span>4.5</span></span>
+									<div class="catalog_in-slider">
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="catalog-item__content">
+									<span class="catalog-item__title">Avenue, Дубай</span>
+									<div class="catalog-item__cost">
+										<div class="catalog-item__price">300 000 - 500 000</div>
+										<div class="currience-choose">
+											<div class="currience">
+												<div class="currience_title">RUB</div>
+												<div class="currience-in">
+													<span class="currience_item currience_item__active">RUB</span>
+													<span class="currience_item">USD</span>
+													<span class="currience_item">EUR</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<ul class="catalog-item__information">
+										<li><span>Строительство:</span>24.21.2024</li>
+										<li><span>1 спальня:</span>300 000 $</li>
+										<li><span>2 спальни:</span>400 000 $</li>
+										<li><span>3 спальни:</span>500 000 $</li>
+									</ul>
+									<span class="catalog-item__comparison">
+									</span>
+									<div class="catalog-item__bottom">
+										<div class="catalog-item__contacts">
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#whatsapp-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#telegram-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#mail-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg>
+														<use xlink:href="images/sprite.svg#phone-icon"></use>
+													</svg>
+												</a>
+											</span>
+										</div>
+										<a href="#" class="catalog-item__btn"><img src="images/arrow-right.svg" alt=""></a>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="catalog-item">
+								<div class="catalog-item__image">
+									<span class="catalog-item__status"><span class="icon"><img src="images/sale-icon.svg" alt=""></span>Продажа</span>
+									<span class="detail_title-raiting"><span>4.5</span></span>
+									<div class="catalog_in-slider">
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="catalog-item__content">
+									<span class="catalog-item__title">Avenue, Дубай</span>
+									<div class="catalog-item__cost">
+										<div class="catalog-item__price">300 000 - 500 000</div>
+										<div class="currience-choose">
+											<div class="currience">
+												<div class="currience_title">RUB</div>
+												<div class="currience-in">
+													<span class="currience_item currience_item__active">RUB</span>
+													<span class="currience_item">USD</span>
+													<span class="currience_item">EUR</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<ul class="catalog-item__information">
+										<li><span>Строительство:</span>24.21.2024</li>
+										<li><span>1 спальня:</span>300 000 $</li>
+										<li><span>2 спальни:</span>400 000 $</li>
+										<li><span>3 спальни:</span>500 000 $</li>
+									</ul>
+									<span class="catalog-item__comparison">
+									</span>
+									<div class="catalog-item__bottom">
+										<div class="catalog-item__contacts">
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#whatsapp-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#telegram-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#mail-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg>
+														<use xlink:href="images/sprite.svg#phone-icon"></use>
+													</svg>
+												</a>
+											</span>
+										</div>
+										<a href="#" class="catalog-item__btn"><img src="images/arrow-right.svg" alt=""></a>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="catalog-item">
+								<div class="catalog-item__image">
+									<span class="catalog-item__status"><span class="icon"><img src="images/sale-icon.svg" alt=""></span>Продажа</span>
+									<span class="detail_title-raiting"><span>4.5</span></span>
+									<div class="catalog_in-slider">
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="catalog-item__content">
+									<span class="catalog-item__title">Avenue, Дубай</span>
+									<div class="catalog-item__cost">
+										<div class="catalog-item__price">300 000 - 500 000</div>
+										<div class="currience-choose">
+											<div class="currience">
+												<div class="currience_title">RUB</div>
+												<div class="currience-in">
+													<span class="currience_item currience_item__active">RUB</span>
+													<span class="currience_item">USD</span>
+													<span class="currience_item">EUR</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<ul class="catalog-item__information">
+										<li><span>Строительство:</span>24.21.2024</li>
+										<li><span>1 спальня:</span>300 000 $</li>
+										<li><span>2 спальни:</span>400 000 $</li>
+										<li><span>3 спальни:</span>500 000 $</li>
+									</ul>
+									<span class="catalog-item__comparison">
+									</span>
+									<div class="catalog-item__bottom">
+										<div class="catalog-item__contacts">
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#whatsapp-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#telegram-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#mail-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg>
+														<use xlink:href="images/sprite.svg#phone-icon"></use>
+													</svg>
+												</a>
+											</span>
+										</div>
+										<a href="#" class="catalog-item__btn"><img src="images/arrow-right.svg" alt=""></a>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="catalog-item">
+								<div class="catalog-item__image">
+									<span class="catalog-item__status"><span class="icon"><img src="images/sale-icon.svg" alt=""></span>Продажа</span>
+									<span class="detail_title-raiting"><span>4.5</span></span>
+									<div class="catalog_in-slider">
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="catalog-item__content">
+									<span class="catalog-item__title">Avenue, Дубай</span>
+									<div class="catalog-item__cost">
+										<div class="catalog-item__price">300 000 - 500 000</div>
+										<div class="currience-choose">
+											<div class="currience">
+												<div class="currience_title">RUB</div>
+												<div class="currience-in">
+													<span class="currience_item currience_item__active">RUB</span>
+													<span class="currience_item">USD</span>
+													<span class="currience_item">EUR</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<ul class="catalog-item__information">
+										<li><span>Строительство:</span>24.21.2024</li>
+										<li><span>1 спальня:</span>300 000 $</li>
+										<li><span>2 спальни:</span>400 000 $</li>
+										<li><span>3 спальни:</span>500 000 $</li>
+									</ul>
+									<span class="catalog-item__comparison">
+									</span>
+									<div class="catalog-item__bottom">
+										<div class="catalog-item__contacts">
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#whatsapp-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#telegram-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#mail-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg>
+														<use xlink:href="images/sprite.svg#phone-icon"></use>
+													</svg>
+												</a>
+											</span>
+										</div>
+										<a href="#" class="catalog-item__btn"><img src="images/arrow-right.svg" alt=""></a>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="catalog-item">
+								<div class="catalog-item__image">
+									<span class="catalog-item__status"><span class="icon"><img src="images/sale-icon.svg" alt=""></span>Продажа</span>
+									<span class="detail_title-raiting"><span>4.5</span></span>
+									<div class="catalog_in-slider">
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+										<div class="catalog_in-slide">
+											<img src="images/catalog-img.jpg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="catalog-item__content">
+									<span class="catalog-item__title">Avenue, Дубай</span>
+									<div class="catalog-item__cost">
+										<div class="catalog-item__price">300 000 - 500 000</div>
+										<div class="currience-choose">
+											<div class="currience">
+												<div class="currience_title">RUB</div>
+												<div class="currience-in">
+													<span class="currience_item currience_item__active">RUB</span>
+													<span class="currience_item">USD</span>
+													<span class="currience_item">EUR</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<ul class="catalog-item__information">
+										<li><span>Строительство:</span>24.21.2024</li>
+										<li><span>1 спальня:</span>300 000 $</li>
+										<li><span>2 спальни:</span>400 000 $</li>
+										<li><span>3 спальни:</span>500 000 $</li>
+									</ul>
+									<span class="catalog-item__comparison">
+									</span>
+									<div class="catalog-item__bottom">
+										<div class="catalog-item__contacts">
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#whatsapp-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#telegram-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg >
+														<use xlink:href="images/sprite.svg#mail-icon"></use>
+													</svg>
+												</a>
+											</span>
+											<span class="catalog-item__contact-item">
+												<a href="">
+													<svg>
+														<use xlink:href="images/sprite.svg#phone-icon"></use>
+													</svg>
+												</a>
+											</span>
+										</div>
+										<a href="#" class="catalog-item__btn"><img src="images/arrow-right.svg" alt=""></a>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="show-more">Показать еще</button>
 				</div>
-				<button type="button" class="show-more">Показать еще</button>
 			</div>
 		</section>
 		
@@ -1423,9 +1503,9 @@
 						<div class="form__row">
 
 							<div class="form__col">
-								<div class="form-group error">
+								<div class="form-group">
 
-									<input type="text" id="name" value="Заполните поле">
+									<input type="text" id="name">
 									<label for="name" class="label-name">
 									Ваше имя*
 									</label>
@@ -1467,7 +1547,7 @@
 
 		<section class="detail_about">
 			<div class="container">
-				<div class="detail_about-in">
+				<div class="detail_about-in dots-bd">
 					<h5 class="section_title">Застройщик</h5>
 					<div class="about flex">
 						<div class="about_img">
@@ -1547,93 +1627,16 @@
                 <span class="catalog-item__title">Avenue, Дубай</span>
                 <div class="catalog-item__cost">
                   <div class="catalog-item__price">300 000 - 500 000</div>
-                  <div class="catalog-item__valuta">
-                    <div class="select select--valuta">
-                      <select class="select2">
-                        <option selected>USD</option>
-                        <option>RUB</option>
-                        <option>EUR</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <ul class="catalog-item__information">
-                  <li><span>Строительство:</span>24.21.2024</li>
-                  <li><span>1 спальня:</span>300 000 $</li>
-                  <li><span>2 спальни:</span>400 000 $</li>
-                  <li><span>3 спальни:</span>500 000 $</li>
-                </ul>
-                <span class="catalog-item__comparison">
-                  <a>Добавить к сравнению</a>
-                </span>
-                <div class="catalog-item__bottom">
-                  <div class="catalog-item__contacts">
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg >
-                          <use xlink:href="images/sprite.svg#whatsapp-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg >
-                          <use xlink:href="images/sprite.svg#telegram-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg >
-                          <use xlink:href="images/sprite.svg#mail-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#phone-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                  </div>
-                  <a href="#" class="catalog-item__btn"><img src="images/arrow-right.svg" alt=""></a>
-                </div>
-
-
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="catalog-item">
-              <div class="catalog-item__image">
-                <span class="catalog-item__status"><span class="icon"><img src="images/sale-icon.svg" alt=""></span>Продажа</span>
-								<span class="detail_title-raiting"><span>4.5</span></span>
-                <div class="catalog_in-slider">
-									<div class="catalog_in-slide">
-										<img src="images/catalog-img.jpg" alt="">
+									<div class="currience-choose">
+										<div class="currience">
+											<div class="currience_title">RUB</div>
+											<div class="currience-in">
+												<span class="currience_item currience_item__active">RUB</span>
+												<span class="currience_item">USD</span>
+												<span class="currience_item">EUR</span>
+											</div>
+										</div>
 									</div>
-									<div class="catalog_in-slide">
-										<img src="images/catalog-img.jpg" alt="">
-									</div>
-									<div class="catalog_in-slide">
-										<img src="images/catalog-img.jpg" alt="">
-									</div>
-								</div>
-              </div>
-              <div class="catalog-item__content">
-                <span class="catalog-item__title">Avenue, Дубай</span>
-                <div class="catalog-item__cost">
-                  <div class="catalog-item__price">300 000 - 500 000</div>
-                  <div class="catalog-item__valuta">
-                    <div class="select select--valuta">
-                      <select class="select2">
-                        <option selected>USD</option>
-                        <option>RUB</option>
-                        <option>EUR</option>
-                      </select>
-                    </div>
-                  </div>
                 </div>
                 <ul class="catalog-item__information">
                   <li><span>Строительство:</span>24.21.2024</li>
@@ -1703,15 +1706,16 @@
                 <span class="catalog-item__title">Avenue, Дубай</span>
                 <div class="catalog-item__cost">
                   <div class="catalog-item__price">300 000 - 500 000</div>
-                  <div class="catalog-item__valuta">
-                    <div class="select select--valuta">
-                      <select class="select2">
-                        <option selected>USD</option>
-                        <option>RUB</option>
-                        <option>EUR</option>
-                      </select>
-                    </div>
-                  </div>
+									<div class="currience-choose">
+										<div class="currience">
+											<div class="currience_title">RUB</div>
+											<div class="currience-in">
+												<span class="currience_item currience_item__active">RUB</span>
+												<span class="currience_item">USD</span>
+												<span class="currience_item">EUR</span>
+											</div>
+										</div>
+									</div>
                 </div>
                 <ul class="catalog-item__information">
                   <li><span>Строительство:</span>24.21.2024</li>
@@ -1781,93 +1785,16 @@
                 <span class="catalog-item__title">Avenue, Дубай</span>
                 <div class="catalog-item__cost">
                   <div class="catalog-item__price">300 000 - 500 000</div>
-                  <div class="catalog-item__valuta">
-                    <div class="select select--valuta">
-                      <select class="select2">
-                        <option selected>USD</option>
-                        <option>RUB</option>
-                        <option>EUR</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <ul class="catalog-item__information">
-                  <li><span>Строительство:</span>24.21.2024</li>
-                  <li><span>1 спальня:</span>300 000 $</li>
-                  <li><span>2 спальни:</span>400 000 $</li>
-                  <li><span>3 спальни:</span>500 000 $</li>
-                </ul>
-                <span class="catalog-item__comparison">
-                  <a>Добавить к сравнению</a>
-                </span>
-                <div class="catalog-item__bottom">
-                  <div class="catalog-item__contacts">
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg >
-                          <use xlink:href="images/sprite.svg#whatsapp-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg >
-                          <use xlink:href="images/sprite.svg#telegram-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg >
-                          <use xlink:href="images/sprite.svg#mail-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                    <span class="catalog-item__contact-item">
-                      <a href="">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#phone-icon"></use>
-                        </svg>
-                      </a>
-                    </span>
-                  </div>
-                  <a href="#" class="catalog-item__btn"><img src="images/arrow-right.svg" alt=""></a>
-                </div>
-
-
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="catalog-item">
-              <div class="catalog-item__image">
-                <span class="catalog-item__status"><span class="icon"><img src="images/sale-icon.svg" alt=""></span>Продажа</span>
-								<span class="detail_title-raiting"><span>4.5</span></span>
-                <div class="catalog_in-slider">
-									<div class="catalog_in-slide">
-										<img src="images/catalog-img.jpg" alt="">
+									<div class="currience-choose">
+										<div class="currience">
+											<div class="currience_title">RUB</div>
+											<div class="currience-in">
+												<span class="currience_item currience_item__active">RUB</span>
+												<span class="currience_item">USD</span>
+												<span class="currience_item">EUR</span>
+											</div>
+										</div>
 									</div>
-									<div class="catalog_in-slide">
-										<img src="images/catalog-img.jpg" alt="">
-									</div>
-									<div class="catalog_in-slide">
-										<img src="images/catalog-img.jpg" alt="">
-									</div>
-								</div>
-              </div>
-              <div class="catalog-item__content">
-                <span class="catalog-item__title">Avenue, Дубай</span>
-                <div class="catalog-item__cost">
-                  <div class="catalog-item__price">300 000 - 500 000</div>
-                  <div class="catalog-item__valuta">
-                    <div class="select select--valuta">
-                      <select class="select2">
-                        <option selected>USD</option>
-                        <option>RUB</option>
-                        <option>EUR</option>
-                      </select>
-                    </div>
-                  </div>
                 </div>
                 <ul class="catalog-item__information">
                   <li><span>Строительство:</span>24.21.2024</li>
@@ -1937,15 +1864,174 @@
                 <span class="catalog-item__title">Avenue, Дубай</span>
                 <div class="catalog-item__cost">
                   <div class="catalog-item__price">300 000 - 500 000</div>
-                  <div class="catalog-item__valuta">
-                    <div class="select select--valuta">
-                      <select class="select2">
-                        <option selected>USD</option>
-                        <option>RUB</option>
-                        <option>EUR</option>
-                      </select>
-                    </div>
+									<div class="currience-choose">
+										<div class="currience">
+											<div class="currience_title">RUB</div>
+											<div class="currience-in">
+												<span class="currience_item currience_item__active">RUB</span>
+												<span class="currience_item">USD</span>
+												<span class="currience_item">EUR</span>
+											</div>
+										</div>
+									</div>
+                </div>
+                <ul class="catalog-item__information">
+                  <li><span>Строительство:</span>24.21.2024</li>
+                  <li><span>1 спальня:</span>300 000 $</li>
+                  <li><span>2 спальни:</span>400 000 $</li>
+                  <li><span>3 спальни:</span>500 000 $</li>
+                </ul>
+                <span class="catalog-item__comparison">
+                  <a>Добавить к сравнению</a>
+                </span>
+                <div class="catalog-item__bottom">
+                  <div class="catalog-item__contacts">
+                    <span class="catalog-item__contact-item">
+                      <a href="">
+                        <svg >
+                          <use xlink:href="images/sprite.svg#whatsapp-icon"></use>
+                        </svg>
+                      </a>
+                    </span>
+                    <span class="catalog-item__contact-item">
+                      <a href="">
+                        <svg >
+                          <use xlink:href="images/sprite.svg#telegram-icon"></use>
+                        </svg>
+                      </a>
+                    </span>
+                    <span class="catalog-item__contact-item">
+                      <a href="">
+                        <svg >
+                          <use xlink:href="images/sprite.svg#mail-icon"></use>
+                        </svg>
+                      </a>
+                    </span>
+                    <span class="catalog-item__contact-item">
+                      <a href="">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#phone-icon"></use>
+                        </svg>
+                      </a>
+                    </span>
                   </div>
+                  <a href="#" class="catalog-item__btn"><img src="images/arrow-right.svg" alt=""></a>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+					<div class="item">
+            <div class="catalog-item">
+              <div class="catalog-item__image">
+                <span class="catalog-item__status"><span class="icon"><img src="images/sale-icon.svg" alt=""></span>Продажа</span>
+								<span class="detail_title-raiting"><span>4.5</span></span>
+                <div class="catalog_in-slider">
+									<div class="catalog_in-slide">
+										<img src="images/catalog-img.jpg" alt="">
+									</div>
+									<div class="catalog_in-slide">
+										<img src="images/catalog-img.jpg" alt="">
+									</div>
+									<div class="catalog_in-slide">
+										<img src="images/catalog-img.jpg" alt="">
+									</div>
+								</div>
+              </div>
+              <div class="catalog-item__content">
+                <span class="catalog-item__title">Avenue, Дубай</span>
+                <div class="catalog-item__cost">
+                  <div class="catalog-item__price">300 000 - 500 000</div>
+									<div class="currience-choose">
+										<div class="currience">
+											<div class="currience_title">RUB</div>
+											<div class="currience-in">
+												<span class="currience_item currience_item__active">RUB</span>
+												<span class="currience_item">USD</span>
+												<span class="currience_item">EUR</span>
+											</div>
+										</div>
+									</div>
+                </div>
+                <ul class="catalog-item__information">
+                  <li><span>Строительство:</span>24.21.2024</li>
+                  <li><span>1 спальня:</span>300 000 $</li>
+                  <li><span>2 спальни:</span>400 000 $</li>
+                  <li><span>3 спальни:</span>500 000 $</li>
+                </ul>
+                <span class="catalog-item__comparison">
+                  <a>Добавить к сравнению</a>
+                </span>
+                <div class="catalog-item__bottom">
+                  <div class="catalog-item__contacts">
+                    <span class="catalog-item__contact-item">
+                      <a href="">
+                        <svg >
+                          <use xlink:href="images/sprite.svg#whatsapp-icon"></use>
+                        </svg>
+                      </a>
+                    </span>
+                    <span class="catalog-item__contact-item">
+                      <a href="">
+                        <svg >
+                          <use xlink:href="images/sprite.svg#telegram-icon"></use>
+                        </svg>
+                      </a>
+                    </span>
+                    <span class="catalog-item__contact-item">
+                      <a href="">
+                        <svg >
+                          <use xlink:href="images/sprite.svg#mail-icon"></use>
+                        </svg>
+                      </a>
+                    </span>
+                    <span class="catalog-item__contact-item">
+                      <a href="">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#phone-icon"></use>
+                        </svg>
+                      </a>
+                    </span>
+                  </div>
+                  <a href="#" class="catalog-item__btn"><img src="images/arrow-right.svg" alt=""></a>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+					<div class="item">
+            <div class="catalog-item">
+              <div class="catalog-item__image">
+                <span class="catalog-item__status"><span class="icon"><img src="images/sale-icon.svg" alt=""></span>Продажа</span>
+								<span class="detail_title-raiting"><span>4.5</span></span>
+                <div class="catalog_in-slider">
+									<div class="catalog_in-slide">
+										<img src="images/catalog-img.jpg" alt="">
+									</div>
+									<div class="catalog_in-slide">
+										<img src="images/catalog-img.jpg" alt="">
+									</div>
+									<div class="catalog_in-slide">
+										<img src="images/catalog-img.jpg" alt="">
+									</div>
+								</div>
+              </div>
+              <div class="catalog-item__content">
+                <span class="catalog-item__title">Avenue, Дубай</span>
+                <div class="catalog-item__cost">
+                  <div class="catalog-item__price">300 000 - 500 000</div>
+									<div class="currience-choose">
+										<div class="currience">
+											<div class="currience_title">RUB</div>
+											<div class="currience-in">
+												<span class="currience_item currience_item__active">RUB</span>
+												<span class="currience_item">USD</span>
+												<span class="currience_item">EUR</span>
+											</div>
+										</div>
+									</div>
                 </div>
                 <ul class="catalog-item__information">
                   <li><span>Строительство:</span>24.21.2024</li>
