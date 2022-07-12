@@ -304,6 +304,24 @@ $(document).ready(function () {
 		}]
 	})
 
+	$('.js-remove-slide').on('click', function() {
+		let slideIndex = $(this).closest('.slick-slide').index()
+		let slideCount = $(this).closest('.slick-list').find('.slick-slide').length
+		console.log(slideCount)
+		if(slideCount > 2){
+			$('.compare_slider-main').slick('slickRemove', slideIndex);
+			$('.compare_slider-nav').slick('slickRemove', slideIndex);
+		}
+	});
+	$('.js-remove-all').on('click', function() {
+		let slideCount = $('.compare_slider-main').find('.slick-slide').length
+		console.log(slideCount)
+		for(let i = 1; i < slideCount - 1; i++){
+			$('.compare_slider-main').slick('slickRemove', 1);
+			$('.compare_slider-nav').slick('slickRemove', 1);
+		}
+	});
+
 	// compare menu fixed on scroll
 	var offset = $('.compare_slider-wrap').offset().top;
 	$(window).scroll(function() {
