@@ -101,8 +101,8 @@ td {
   padding: 0;
   border: 0;
   outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
+  // font-size: 100%;
+  // vertical-align: baseline;
   background: transparent
 }
 
@@ -756,6 +756,7 @@ header {
   &--fixed {
     width: 250px;
   }
+	
 
   &:after {
     content: "";
@@ -766,6 +767,7 @@ header {
     right: 30px;
     top: calc(50% - 3.5px);
     border-radius: 50%;
+		transition: 0.3s;
   }
 
   &:before {
@@ -776,12 +778,42 @@ header {
     position: absolute;
     left: 30px;
     top: calc(50% - 3.5px);
+		transition: 0.3s;
     border-radius: 50%;
   }
 
   &:hover {
     background: #00BC78;
   }
+	&-white{
+		background: #fff;
+		color: $green;
+		padding: 0 29px;
+		border: 1px solid $green;
+		&:hover{
+			color: #fff;
+		}
+		.item &:hover::before,
+		.item &:hover::after{
+			background: #fff;
+		}
+		.item &::before,
+		.item &::after{
+			background: $green;
+		}
+	}
+	&-green{
+		padding: 0 29px;
+		border: 1px solid #fff;
+		&:hover{
+			background: #fff;
+			color: $green;
+		}
+		.item &:hover::before,
+		.item &:hover::after{
+			background: $green;
+		}
+	}
 }
 
 #anchor-1 {
@@ -1639,6 +1671,10 @@ transition: 0.5s;
 		right: 17px;
 		height: 26px;
 		z-index: 10;
+    @include breakpoint($maxWidth: 768px) {
+			top: 10px;
+			right: 10px;
+		}
 	}
 
   // .catalog-item__content
@@ -3562,12 +3598,11 @@ select:disabled {
 	}
 	&_title-raiting{
 		display: inline-block;
-		width: 80px;
+		width: 61px;
 		position: relative;
 		@include breakpoint($maxWidth: 768px) {
 			display: block;
 			margin: 15px auto 0;
-			width: 65px;
 		}
 		span{
 			display: block;
@@ -3591,7 +3626,7 @@ select:disabled {
 				height: 14px;
 				position: absolute;
 				left: 10px;
-				top: 50%;
+				top: 42%;
 				transform: translateY(-50%);
 				background: url(../images/star-white.svg);
 			}
@@ -3626,12 +3661,12 @@ select:disabled {
 			}
 			&-item{
 				padding-right: 30px;
+				display: flex;
 				@include breakpoint($maxWidth: 768px) {
-					display: flex;
 					padding-right: 15px ;
 				}
 				&:first-child svg{
-					margin-top: -10px;
+					margin-top: -6px;
 				}
 			}
 			svg{
@@ -3641,6 +3676,10 @@ select:disabled {
 				@include breakpoint($maxWidth: 768px) {
 					align-self: center;
 				}
+			}
+			span{
+				display: block;
+				align-self: center;
 			}
 		}
 		.slick-dots{
@@ -3861,7 +3900,7 @@ select:disabled {
 .section_title{
 	text-align: center;
 	font-family: $montserrat;
-	color: #404040;
+	color: $dark-color;
 	font-size: 40px;
 	line-height: 48px;
 	padding-bottom: 50px;
@@ -3992,7 +4031,7 @@ select:disabled {
 			}
 		}
 		&_txt{
-			color: #404040;
+			color: $dark-color;
 			font-size: 18px;
 			line-height: 29px;
 			@include breakpoint($maxWidth: 768px) {
@@ -4556,5 +4595,495 @@ select:disabled {
 			align-self: center;
 			width: 100%;
 		}
+	}
+}
+
+.compare{
+	.filter-menu{
+		margin-bottom: 37px;
+	}
+	.content-contacts{
+		padding-top: 40px;
+	}
+	.tab-body{
+		display: flex;
+		font-size: 20px;
+		line-height: 120%;
+		padding-bottom: 20px;
+		color: #fff;
+		span{
+			display: block;
+			padding-right: 8px;
+		}
+	}
+	.btn_tab-clear{
+		background: none;
+		border: none;
+		border-bottom: 1px solid #fff;
+		cursor: pointer;
+		outline: none;
+		color: inherit;
+		font-family: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		transition: 0.3s;
+		&:hover{
+			color: $green-hover;
+			border-color: $green-hover;
+		}
+	}
+	.catalog-item{
+		box-shadow: none;
+		background: transparent;
+		&__information{
+			.square{
+				padding-right: 7px;
+				&::before{
+					font-size: 11px;
+					top: -2px;
+				}
+			}
+		}
+		&__total{
+			display: block;
+			font-weight: 700;
+			font-family: $montserrat;
+			text-align: center;
+			padding: 20px 0;
+			font-size: 24px;
+			line-height: 120%;
+		}
+		&__remove{
+			display: block;
+			text-align: center;
+			font-size: 16px;
+			line-height: 120%;
+			color: #F26666;
+			width: 100%;
+			cursor: pointer;
+			border: none;
+			background: none;
+			outline: none;
+			transition: 0.3s;
+			&:hover{
+				color: #F39797;
+			}
+		}
+		&__image{
+			padding: 0 13px 0 12px;
+			img{
+				display: block;
+				max-width: 100%;
+			}
+		}
+		&__content-wrap{
+			padding-top: 40px;
+		}
+		&__content{
+			border-right: 1px solid #EFEFEF;;
+		}
+		&__title{
+			text-align: center;
+			color: $green;
+			margin-bottom: 25px;
+		}
+	}
+	.section-filter-content{
+		padding-bottom: 150px;
+	}
+	&_slider-main{
+		padding: 0 17px;
+		transition: 0.3s;
+		&::before{
+			content: '';
+			position: absolute;
+			top: 140px;
+			bottom: 0;
+			right: 0;
+			z-index: 1;
+			width: 3px;
+			background: #fff;
+			@include breakpoint($maxWidth: 768px) {
+				top: 85px;
+			}
+		}
+		@include breakpoint($maxWidth: 768px) {
+			padding: 0;
+			margin: 0 -7px;
+		}
+		.catalog-item__status{
+			display: none;
+		}
+		.slick-arrow{
+			width: 56px;
+			height: 56px;
+			border-radius: 0;
+			background: $green url(../images/arrow-right.svg) center no-repeat;
+			border: 1px solid $green;
+			top: 122px;
+			&:hover{
+				background-color: $green-hover;
+				border-color: $green-hover;
+			}
+			@include breakpoint($maxWidth: 768px) {
+				width: 36px;
+				height: 36px;
+				background-size: 12px 12px;
+				top: 70px;
+			}
+		}
+		.slick-next{
+			right: 0;
+			transform: rotate(0);
+			@include breakpoint($maxWidth: 768px) {
+				right: -13px;
+			}
+		}
+		.slick-prev{
+			left: 0;
+			transform: rotate(-180deg);
+			@include breakpoint($maxWidth: 768px) {
+				left: -13px;
+			}
+		}
+		.slick-disabled{
+			background-color: #B5B5B5;
+			border-color: #B5B5B5;
+			cursor: default;
+			pointer-events: none;
+		}
+		.catalog-item{
+			&__content-wrap{
+				@include breakpoint($maxWidth: 768px) {
+					padding-top: 20px;
+				}
+			}
+			&__image{
+				@include breakpoint($maxWidth: 768px) {
+					padding: 0 7px;
+					height: 160px;
+				}
+				& > img{
+					@include breakpoint($maxWidth: 768px) {
+						height: auto;
+						min-height: 160px;
+					}
+				}
+			}
+			&__content{
+				@include breakpoint($maxWidth: 768px) {
+					padding: 0 10px 0;
+				}
+			}
+			&__title{
+				@include breakpoint($maxWidth: 768px) {
+					font-size: 14px;
+					line-height: 120%;
+					margin-bottom: 20px;
+				}
+			}
+			&__information li{
+				@include breakpoint($maxWidth: 768px) {
+					display: block;
+					margin-bottom: 19px;
+					text-align: center;
+					font-size: 13px;
+					line-height: 130%;
+				}
+				& span{
+					@include breakpoint($maxWidth: 768px) {
+						display: block;
+						padding-bottom: 4px;
+						color: #B9B9B9;
+					}
+				}
+				& .square{
+					color: inherit;
+					display: inline-block;
+				}
+			}
+			&__remove{
+				font-size: 12px;
+				line-height: 120%;
+			}
+			&__total{
+				@include breakpoint($maxWidth: 768px) {
+					font-size: 13px;
+					line-height: 120%;
+					padding: 0 0 19px;
+					margin-top: -10px;
+				}
+			}
+			&__add{
+				.catalog-item__image{
+					background: $green;
+				}
+				.item_add-link{
+					display: flex;
+					height: 100%;
+					width: 100%;
+					justify-content: center;
+					&:hover .btn{
+						background: #fff;
+						color: $green;
+						&::before,
+						&::after{
+							background: $green;
+						}
+					}
+					.btn{
+						align-self: center;
+						width: 100%;
+						max-width: 308px;
+						@include breakpoint($maxWidth: 768px) {
+							text-align: center;
+							font-size: 14px;
+							line-height: 17px;
+							max-width: 150px;
+						}
+						&::before{
+							@include breakpoint($maxWidth: 768px) {
+								left: 10px;
+							}
+						}
+						&::after{
+							@include breakpoint($maxWidth: 768px) {
+								right: 10px;
+							}
+						}
+					}
+				}
+				.catalog-item__title{
+					color: $black-color;
+				}
+				.catalog-item__information li{
+					justify-content: center;
+				}
+				.catalog-item__information li{
+					@include breakpoint($maxWidth: 768px) {
+						height: 38px;
+						line-height: 38px;
+					}
+				}
+			}
+		}
+	}
+	.item__add{
+		.item_in{
+			display: flex;
+			height: 85px;
+			@include breakpoint($maxWidth: 768px) {
+				height: 67px;
+			}
+		}
+		.item_txt{
+			align-self: end;
+		}
+	}
+	.compare_slider-wrap{
+		border-bottom: 1px solid transparent;
+		transition: 0.3s;
+		@include breakpoint($maxWidth: 768px) {
+			max-width: 600px;
+			margin: 0 auto;
+		}
+		&.active{
+			background: #fff;
+			z-index: 100;
+			position: sticky;
+			border-color: #EFEFEF;
+			top: 0;
+			.compare_slider-main{
+				padding-bottom: 0;
+				&::before{
+					top: 0;
+				}
+			}
+			.catalog-item{
+				&__title{
+					margin-bottom: 13px;
+					@include breakpoint($maxWidth: 768px) {
+						padding-top: 16px;
+					}
+				}
+				&__total,
+				&__content-wrap{
+					padding: 0;
+				}
+				&__image{
+					height: 0;
+				}
+				&__remove{
+					padding: 20px 0 30px;
+					@include breakpoint($maxWidth: 768px) {
+						padding: 4px 0 14px;
+					}
+				}
+			}
+			.slick-arrow{
+				top: 60px;
+				background: #fff url(../images/arrow-right-white.png) center no-repeat;
+				@include breakpoint($maxWidth: 768px) {
+					top: 23px;
+				}
+			}
+			.slick-disabled{
+				background-image: url(../images/arrow-right-grey.png);
+			}
+		}
+	}
+	.detail_title-raiting {
+		right: 25px;
+		@include breakpoint($maxWidth: 768px) {
+			right: 17px;
+		}
+		span{
+			left: 0;
+		}
+	}
+	.block{
+		padding-bottom: 50px;
+		@include breakpoint($maxWidth: 768px) {
+			padding-bottom: 25px;
+		}
+		&_title{
+			font-family: $montserrat;
+			font-weight: 700;
+			font-size: 40px;
+			line-height: 120%;
+			text-align: center;
+			text-transform: capitalize;
+			color: $black-color;
+			padding-bottom: 50px;
+			@include breakpoint($maxWidth: 768px) {
+				padding-bottom: 25px;
+				font-size: 20px;
+				line-height: 120%;
+			}
+		}
+	}
+	&_slider-nav{
+		padding: 0 17px;
+		&::before{
+			content: '';
+			position: absolute;
+			right: 0;
+			background: #fff;
+			top: 0;
+			bottom: 0;
+			width: 3px;
+			z-index: 1;
+		}
+		@include breakpoint($maxWidth: 768px) {
+			padding: 0;
+		}
+		.item{
+			border-right: 1px solid #EFEFEF;
+			position: relative;
+			&::before{
+				content: '';
+				position: absolute;
+				width: 7px;
+				height: 7px;
+				top: 50%;
+				right: 0;
+				transform: translate(50%, -50%);
+				background: #EFEFEF;
+				border-radius: 50%;
+			}
+			&__add{
+				@include breakpoint($maxWidth: 768px) {
+					display: flex!important;
+					flex-direction: column;
+					justify-content: space-between;
+				}
+			}
+			&_in{
+				padding: 0 10px;
+				color: $dark-color;
+				&__error{
+					color: #F26666;
+					.item_ic{
+						background-image: url(../images/item-error.png);
+					}
+				}
+			}
+			&_txt{
+				display: block;
+				text-align: center;
+				width: 100%;
+				overflow: hidden;
+				font-size: 20px;
+				line-height: 1;
+				padding: 22px 0;
+				@include breakpoint($maxWidth: 768px) {
+					font-size: 13px;
+					padding: 17px 0;
+				}
+			}
+			&_ic{
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background: url(../images/item-success.png) center no-repeat;
+				margin: 0 auto;
+				display: block;
+			}
+		}
+		&__btns{
+			.item{
+				border-color: transparent;
+				&::before{
+					display: none;
+				}
+				&_in{
+					padding: 0 7px;
+				}
+			}
+			.btn{
+				max-width: 308px;
+				width: 100%;
+				margin: 0 auto;
+				@include breakpoint($maxWidth: 768px) {
+					font-size: 14px;
+					line-height: 17px;
+					text-align: center;
+				}
+				&::before{
+					@include breakpoint($maxWidth: 768px) {
+						left: 10px;
+					}
+				}
+				&::after{
+					@include breakpoint($maxWidth: 768px) {
+						right: 10px;
+					}
+				}
+			}
+		}
+	}
+	.slick-track{
+		display: flex!important;
+	}
+	.slick-slide{
+    height: inherit !important;
+		& > div,
+		.item,
+		.catalog-item{
+			height: 100%;
+		}
+	}
+}
+
+.section--compare{
+	margin-top: -150px;
+	position: relative;
+	z-index: 10;
+  @include breakpoint($maxWidth: 1200px) {
+		margin-top: -90px;
+	}
+	&.active{
+		background: #fff;
+		padding-top: 50px;
 	}
 }
