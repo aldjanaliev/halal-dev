@@ -7,9 +7,8 @@
   <meta name="viewport" content="width=device-width, user-scalable=no">
   <title>Halal Development</title>
 
-
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
   <link href="css/fancybox.min.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
 
 
 
@@ -191,7 +190,7 @@
 								</ul>
 								<div class="info_bot">
 									<a href="" class="info_add">Добавить к сравнению</a>
-									<button class="btn">Запросить данные</button>
+									<button class="btn" data-src="#modal-data" data-fancybox>Запросить данные</button>
 								</div>
 							</div>
 						</div>
@@ -253,7 +252,7 @@
 								</ul>
 								<div class="info_bot">
 									<a href="" class="info_add">Добавить к сравнению</a>
-									<button class="btn">Запросить данные</button>
+									<button class="btn" data-src="#modal-data" data-fancybox>Запросить данные</button>
 								</div>
 							</div>
 						</div>
@@ -315,7 +314,7 @@
 								</ul>
 								<div class="info_bot">
 									<a href="" class="info_add">Добавить к сравнению</a>
-									<button class="btn">Запросить данные</button>
+									<button class="btn" data-src="#modal-data" data-fancybox>Запросить данные</button>
 								</div>
 							</div>
 						</div>
@@ -521,7 +520,7 @@
 						<li>Зеленый сад</li>
 						<li>Общий бассейн</li>
 					</ul>
-          <a href="#" class="btn btn--fixed">Запросить данные</a>
+          <a href="#" class="btn btn--fixed" data-src="#modal-data" data-fancybox>Запросить данные</a>
         </div>
       </div>
     </section>
@@ -1538,7 +1537,7 @@
 						</div>
 
 						<div class="btn-center">
-							<button class="btn btn--fixed">Отправить</button>
+							<button class="btn btn--fixed" data-src="#modal-thanks" data-fancybox>Отправить</button>
 						</div>
 					</form>
 				</div>
@@ -2121,6 +2120,72 @@
     </div>
 
   </footer>
+
+	<!-- modals -->
+	<div class="modal modal-data" id="modal-data">
+		<div class="modal-in">
+			<span class="modal_title">Запросить данные</span>
+			<div class="modal_body">
+				<form action="">
+
+					<div class="form__row">
+
+						<div class="form__col">
+							<div class="form-group">
+
+								<input type="text" id="name">
+								<label for="name" class="label-name">
+								Ваше имя*
+								</label>
+							</div>
+
+							<div class="form-group">
+								<input type="tel" id="phone" ""="">
+								<label for="phone" class="label-name">
+								Телефон*
+								</label>
+							</div>
+
+							<div class="form-group">
+								<input type="email" id="email">
+								<label for="email" class="label-name">
+								Email*
+								</label>
+							</div>
+
+						</div>
+
+						<div class="form__col">
+							<div class="form-group">
+								<textarea id="message"></textarea>
+								<label for="message" class="label-name">
+									Сообщение*
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="btn-center">
+						<button class="btn btn--fixed btn-close" data-src="#modal-thanks" data-fancybox>Отправить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-thanks" id="modal-thanks">
+		<div class="modal-in thanks-in">
+			<div class="modal_body">
+				<div class="thanks_ic"></div>
+				<div class="thanks_content">
+					<span class="modal_title">Спасибо!</span>
+					<p>Ваша заявка успешно отправлена.</p>
+					<p>Наш представитель свяжется с вами в течение 24 часов.</p>
+				</div>
+				<div class="btn-center">
+					<button class="btn btn--fixed btn-close">Ок</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 

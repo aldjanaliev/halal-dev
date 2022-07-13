@@ -219,14 +219,32 @@ $(document).ready(function () {
 	})
 
 	$('.date-wrap').on('click', '.date', function(){
-		console.log(555)
 		if(!$(this).hasClass('date-active')){
 			$(this).closest('.date-wrap').find('.date-active').removeClass('date-active')
 			$(this).addClass('date-active')
+			// move slider
+			let slideParent = $(this).closest('.slick-slider')
+			let slideActive = slideParent.find('.slick-active')
+			let slide = $(this).closest('.slick-active')
+			slideParent.find('.slick-counter').removeClass('slick-counter')
+			slide.addClass('slick-counter')
+			let slideCount = slideParent.find('.slick-counter')
+			let slideIndex = slideActive.index(slideCount)
+			if(slideIndex == 0){
+				slideParent.find('.slick-prev').click()
+			} else if(slideIndex == slideActive.length - 1){
+				slideParent.find('.slick-next').click()
+			}
 		}
 	})
 
-	// стр детално, динамика для слайда планировки
+	// modal close btn
+	$('.btn-close').on('click', function(){
+		let modalBtn = $(this).closest('.modal').find('.fancybox-close-small')
+		modalBtn.click()
+	})
+
+	// стр детально, динамика для слайда планировки
 	$('.layout_nav-all').text($('.layout_slide-nav').length)
 	$('.layout_slider-nav').on('afterChange', function(event, slick, currentSlide, nextSlide){
 		console.log(nextSlide)
