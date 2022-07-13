@@ -4608,6 +4608,10 @@ select:disabled {
   color: #03EA97;
 }
 
+.detail_about .about .hide-txt {
+  display: none;
+}
+
 .detail-section .btn {
   padding: 0 60px;
 }

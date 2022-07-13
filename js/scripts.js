@@ -204,16 +204,18 @@ $(document).ready(function () {
 	}
 
 	let addTxtHeight = $('.about_txt-wrap').outerHeight()
-	$('.show-txt').on('click', function(){
-		let addTxt = $(this).prev()
-		if($(this).hasClass('active')){
+	$('.about_btn').on('click', function(){
+		let parent = $(this).closest('.show-txt_container')
+		let addTxt = parent.find('.about_txt-wrap')
+		if(!$(this).hasClass('show-txt')){
 			addTxt.css('height', addTxtHeight + 'px')
-			$(this).removeClass('active')
+			$(this).css('display','none')
+			$('.show-txt').css('display','block')
 		} else{
-			let addTxtHeight = $('.about_txt').outerHeight()
+			let addTxtHeight = parent.find('.about_txt').outerHeight()
 			addTxt.css('height', addTxtHeight + 'px')
-			$(this).addClass('active')
-			
+			$(this).css('display','none')		
+			$('.hide-txt').css('display','block')
 		}
 		
 	})
