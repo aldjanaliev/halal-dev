@@ -236,17 +236,25 @@ body {
 //     display: block;
 //   }
 // }
-
+.dn{
+	display: none;
+  @include breakpoint($maxWidth: 768px) {
+		display: block;
+	}
+}
+.db{
+  @include breakpoint($maxWidth: 768px) {
+		display: none;
+	}
+}
 
 h1 {
   font-family: $montserrat;
   font-weight: 700;
   font-size: 72px;
   line-height: 113%;
-  letter-spacing: 0.02em;
   color: #FFFFFF;
   margin: 50px 0;
-  letter-spacing: 0;
 
   @include breakpoint($maxWidth: 992px) {
     text-align: center;
@@ -273,7 +281,6 @@ h2 {
   color: $dark-color;
   margin-bottom: 70px;
   text-align: center;
-  letter-spacing: 0.02em;
 
   @include breakpoint($maxWidth: 768px) {
     font-size: 20px;
@@ -423,12 +430,22 @@ h2 {
     height: 40px;
     padding: 0 20px;
   }
+	@include breakpoint($maxWidth: 768px) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 100;
+	}
 }
 
 header {
   width: 100%;
   position: absolute;
-  z-index: 9;
+	top: 0;
+	left: 0;
+	right: 0;
+  z-index: 100;
   padding: 63px 67px;
 
   @include breakpoint($maxWidth: 1200px) {
@@ -506,6 +523,7 @@ header {
 
   @include breakpoint($maxWidth: 768px) {
     padding: 24px 20px;
+		margin-top: 40px;
   }
 
   &__selects {
@@ -542,7 +560,7 @@ header {
 				left: 0;
 				right: auto;
 				@include breakpoint($maxWidth: 992px) {
-					width: 74px;
+					width: 71px;
 				}
 			}
 			&-choose__right{
@@ -893,7 +911,7 @@ header {
 
   min-height: 100vh;
   padding-bottom: 120px;
-  padding-top: 215px;
+  padding-top: 200px;
   box-sizing: border-box;
   position: relative;
   z-index: 8;
@@ -1264,7 +1282,7 @@ header {
     overflow: hidden;
     background: url(../images/filter-arrow.png) calc(100% - 35px) 50% no-repeat;
     background-size: 8px auto;
-transition: 0.5s;
+	transition: 0.5s;
     @include breakpoint($maxWidth: 1200px) {
       background: url(../images/filter-arrow.png) calc(100% - 15px) 50% no-repeat !important;
       background-size: 8px auto !important;
@@ -1370,7 +1388,7 @@ transition: 0.5s;
 
   .item {
     width: calc(100%/3 - 18px);
-    margin-bottom: 27px;
+    margin-bottom: 17px;
 
     @include breakpoint($maxWidth: 992px) {
       width: calc(100%/2 - 15px);
@@ -1594,7 +1612,7 @@ transition: 0.5s;
     }
 
     @include breakpoint($maxWidth: 767px) {
-      margin: 0 5px;
+      margin: 0;
     }
   }
 }
@@ -1646,7 +1664,7 @@ transition: 0.5s;
 
       .catalog-item__comparison {
         position: absolute;
-        top: 114px;
+        top: 134px;
         right: 60px;
         margin: 0;
       }
@@ -1734,12 +1752,11 @@ transition: 0.5s;
 		color: #fff;
 		position: absolute;
 		top: 17px;
-		right: 17px;
+		right: 27px;
 		height: 26px;
 		z-index: 10;
     @include breakpoint($maxWidth: 768px) {
-			top: 10px;
-			right: 10px;
+			right: 17px;
 		}
 	}
 
@@ -1807,7 +1824,7 @@ transition: 0.5s;
     font-weight: 600;
     font-size: 18px;
     color: $dark-color;
-    margin-right: 6px;
+    margin-right: 8px;
   }
 
   // .catalog-item__valuta
@@ -1832,13 +1849,8 @@ transition: 0.5s;
 
   &__comparison {
     display: block;
-    margin-bottom: 17px;
-    padding-top: 3px;
-
-    @include breakpoint($maxWidth: 992px) {
-      margin-bottom: 8px;
-    }
-
+    padding-top: 2px;
+		padding-bottom: 2px;
     &.delete {
       a {
         color: $red !important;
@@ -1849,13 +1861,14 @@ transition: 0.5s;
       }
     }
 
-    a {
+    button.add-compare {
       font-weight: 400;
       font-size: 14px;
       color: $green;
       transition: 0.5s;
       cursor: pointer;
-
+			margin-bottom: 0;
+			border: none;
       &:hover {
         color: $green-hover;
       }
@@ -1868,7 +1881,8 @@ transition: 0.5s;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 66px;
+    // height: 66px;
+		padding-top: 8px;
   }
 
   // .catalog-item__contacts
@@ -1887,7 +1901,7 @@ transition: 0.5s;
 
 
     @include breakpoint($maxWidth: 992px) {
-      margin-right: 12px;
+      margin-right: 16px;
       margin-top: -17px;
     }
 
@@ -2474,10 +2488,23 @@ footer {
 
 .footer-logo {
   margin-bottom: 73px;
-
+	display: block;
+	width: 53px;
+	height: 81px;
   img {
     width: 52px;
   }
+	svg{
+		width: 100%;
+		height: 100%;
+		color: $green;
+		transition: 0.3s;
+	}
+	&:hover{
+		svg{
+			color: $green-hover;
+		}
+	}
 }
 
 .footer-menu {
@@ -3634,7 +3661,8 @@ select:disabled {
 
 .detail{
 	h1{
-		margin: 60px 0 15px;
+		margin: 60px 0 27px;
+		letter-spacing: 0.02em;
 		@include breakpoint($maxWidth: 768px) {
 			padding: 30px 0 40px;
 			margin: 0;
@@ -3642,14 +3670,26 @@ select:disabled {
 		}
 	}
 	& &-main{
-		.slick-dots li button{
-			width: 20px;
-			height: 20px;
-			border-width: 3px;
-			@include breakpoint($maxWidth: 768px) {
-				width: 12px;
-				height: 12px;
-				border-width: 2px;
+		padding-bottom: 0!important;
+		.slick-dots{
+			position: absolute;
+			bottom: -4px;
+			right: 0;
+			li{
+				margin: 0 0 0 20px;
+				@include breakpoint($maxWidth: 768px) {
+					margin: 0 5px;
+				}
+				button{
+					width: 20px;
+					height: 20px;
+					border-width: 3px;
+					@include breakpoint($maxWidth: 768px) {
+						width: 12px;
+						height: 12px;
+						border-width: 2px;
+					}
+				}
 			}
 		}
 	}
@@ -3665,9 +3705,9 @@ select:disabled {
 		}
 	}
 	.section-filter-content{
-		padding-bottom: 100px;
+		padding-bottom: 98px;
 		@include breakpoint($maxWidth: 990px) {
-			padding-top: 140px;
+			padding-top: 149px;
 		}
 		@include breakpoint($maxWidth: 768px) {
 			padding-bottom: 0;
@@ -3743,10 +3783,15 @@ select:disabled {
 				padding: 0 20px;
 				background: #fff;
 			}
+			.info_add {
+				@include breakpoint($maxWidth: 768px) {
+					margin: 0 0 30px 70px;
+				}
+			}
 		}
 		.info_top{
 			display: flex;
-			padding-bottom: 30px;
+			padding-bottom: 24px;
 			font-family: $montserrat;
 			font-size: 18px;
 			line-height: 22px;
@@ -3763,16 +3808,23 @@ select:disabled {
 				padding-right: 30px;
 				display: flex;
 				@include breakpoint($maxWidth: 768px) {
-					padding-right: 15px ;
+					padding-right: 2px ;
 				}
 				&:first-child svg{
 					margin-top: -6px;
+					margin-right: 10px;
+				}
+				&:last-child {
+					padding-left: 18px;
+					svg{
+						margin-right: 10px;
+					}
 				}
 			}
 			svg{
 				width: 32px;
 				height: 32px;
-				margin-right: 10px;
+				margin-right: 15px;
 				@include breakpoint($maxWidth: 768px) {
 					align-self: center;
 				}
@@ -3786,19 +3838,20 @@ select:disabled {
 			@include breakpoint($maxWidth: 768px) {
 				position: absolute;
 				left: 0;
-				top: 350px;
+				top: 345px;
+				bottom: auto!important;
 				justify-content: center!important;
 			}
 		}
 	}
 	.info_desc{
 		display: flex;
-		margin-bottom: 60px;
+		margin-bottom: 58px;
 		position: relative;
 		padding-right: 60px;
 		display: inline-block;
 		@include breakpoint($maxWidth: 768px) {
-			margin: 22px auto 30px;
+			margin: 22px auto 27px;
 			max-width: 315px;
 			display: block;
 		}
@@ -3824,6 +3877,8 @@ select:disabled {
 		.btn{
 			@include breakpoint($maxWidth: 768px) {
 				margin: 0 auto;
+				width: 100%;
+				max-width: 303px;
 			}
 		}
 	}
@@ -3834,7 +3889,7 @@ select:disabled {
 		max-width: 400px;
 		padding-bottom: 50px;
 		@include breakpoint($maxWidth: 768px) {
-			padding-bottom: 30px;
+			padding-bottom: 12px;
 			max-width: 315px;
 			margin: 0 auto;
 		}
@@ -3848,7 +3903,7 @@ select:disabled {
 		padding-bottom: 20px;
 		@include breakpoint($maxWidth: 768px) {
 			font-size: 16px;
-			padding-bottom: 16px;
+			padding-bottom: 18px;
 			line-height: 1;
 		}
 	}
@@ -3865,7 +3920,7 @@ select:disabled {
 			border-color: $green;
 			font-size: 16px;
 			line-height: 19px;
-			margin: 0 0 30px 75px;
+			margin: 0 0 30px;
 		}
 		&:hover{
 			border-bottom-color: $green;
@@ -3897,10 +3952,13 @@ select:disabled {
 		.location{
 			background: #ddd;
 			min-height: 640px;
-			margin-bottom: 63px;
+			margin-bottom: 65px;
 			@include breakpoint($maxWidth: 990px) {
-				height: 520px;
+				min-height: 527px;
 			}
+		}
+		.content-contacts{
+			margin-bottom: 27px;
 		}
 	}
 	.section--investments{
@@ -3919,11 +3977,28 @@ select:disabled {
 		}
 	}
 	.servise{
+		padding: 62px 73px;
+			@include breakpoint($maxWidth: 768px) {
+				padding: 34px 23px;
+			}
 		.btn{
 			max-width: 308px;
 			width: 100%;
 			@include breakpoint($maxWidth: 566px) {
 				max-width: 100%;
+			}
+		}
+		h2{
+			margin-bottom: 67px;
+			@include breakpoint($maxWidth: 768px) {
+				font-size: 20px;
+				margin-bottom: 47px;
+			}
+		}
+		ul{
+			max-width: 662px;
+			@include breakpoint($maxWidth: 768px) {
+				padding-bottom: 60px;
 			}
 		}
 	}
@@ -3936,7 +4011,7 @@ select:disabled {
 		}
 		.slick-dots{
 			position: absolute;
-			bottom: 20px;
+			bottom: 12px;
 			left: 0;
 			button{
 				background: #fff;
@@ -3957,6 +4032,12 @@ select:disabled {
 		border-top: 1px solid #E9E9E9;
 		border-bottom: 1px solid #E9E9E9;
 	}
+	.detail-layout{
+		padding-bottom: 82px;
+		@include breakpoint($maxWidth: 768px) {
+			padding-bottom: 41px;
+		}
+	}
 }
 .section_title{
 	text-align: center;
@@ -3964,12 +4045,17 @@ select:disabled {
 	color: $dark-color;
 	font-size: 40px;
 	line-height: 48px;
-	padding-bottom: 50px;
+	font-weight: 700;
+	padding-bottom: 60px;
 	text-transform: capitalize;
 	@include breakpoint($maxWidth: 768px) {
 		font-size: 20px;
 		padding-bottom: 30px;
 		line-height: 24px;
+		letter-spacing: 0.02em;
+	}
+	&__simple{
+		text-transform: none;
 	}
 }
 .flex{
@@ -3978,11 +4064,11 @@ select:disabled {
 .detail_about{
 	padding: 123px 0 60px;
 	@include breakpoint($maxWidth: 768px) {
-		padding: 45px 0;
+		padding: 45px 0 50px;
 	}
 	&-in{
 		border: 1px solid #EFEFEF;
-		padding: 0 60px 60px;
+		padding: 0 60px 114px;
 		@include breakpoint($maxWidth: 768px) {
 			border: none;
 			padding: 0;
@@ -4005,12 +4091,10 @@ select:disabled {
 		&_img{
 			width: calc(100% - 676px);
 			max-width: 500px;
-			height: 500px;
 			display: flex;
 			@include breakpoint($maxWidth: 1200px) {
 				width: 100%;
-				height: auto;
-				padding-bottom: 35px;
+				padding-bottom: 39px;
 				margin: 0 auto;
 			}
 			img{
@@ -4021,7 +4105,7 @@ select:disabled {
 			}
 		}
 		&_content{
-			width: 676px;
+			width: 687px;
 			@include breakpoint($maxWidth: 1200px) {
 				width: 100%;
 			}
@@ -4033,13 +4117,15 @@ select:disabled {
 			line-height: 36px;
 			padding-bottom: 30px;
 			margin-bottom: 0;
+			font-weight: 700;
+			font-family: $proxima;
 			@include breakpoint($maxWidth: 1200px) {
 				text-align: center;
 			}
 			@include breakpoint($maxWidth: 768px) {
 				font-size: 26px;
 				line-height: 31px;
-				padding-bottom: 30px;
+				padding-bottom: 43px;
 			}
 		}
 		&_desc{
@@ -4048,7 +4134,7 @@ select:disabled {
 			margin-bottom: 33px;
 			@include breakpoint($maxWidth: 768px) {
 				flex-direction: column;
-				padding-bottom: 10px;
+				padding-bottom: 0;
 				margin-bottom: 40px;
 				border-bottom: 1px solid #EFEFEF;
 			}
@@ -4059,7 +4145,7 @@ select:disabled {
 			@include breakpoint($maxWidth: 768px) {
 				align-self: center;
 				flex-direction: column;
-				padding-bottom: 30px;
+				padding-bottom: 38px;
 			}
 			span{
 				color: #00af70;
@@ -4127,6 +4213,12 @@ select:disabled {
 	}
 }
 .detail-section{
+	&.section{
+		padding-bottom: 43px;
+		@include breakpoint($maxWidth: 768px) {
+			padding-bottom: 23px;
+		}
+	}
 	.btn{
 		padding: 0 60px;
 	}
@@ -4137,16 +4229,20 @@ select:disabled {
 			}
 		}
 	}
+	.catalog-block{
+		@include breakpoint($maxWidth: 768px) {
+			margin-bottom: 14px;
+		}
+	}
 }
 .detail_order{
 	padding: 90px 0 97px;
 	background: url(../images/detail_order.jpg);
 	@include breakpoint($maxWidth: 768px) {
-		padding: 35px 0;
+		padding: 27px 0;
 	}
 	.section_title{
 		color: #fff;
-		padding-bottom: 60px;
 		@include breakpoint($maxWidth: 768px) {
 			padding-bottom: 35px;
 		}
@@ -4158,12 +4254,15 @@ select:disabled {
 			padding: 0 42px;
 			@include breakpoint($maxWidth: 768px) {
 				max-width: 350px;
-				padding: 0 32px;
+				padding: 0 28px;
 				margin-bottom: 30px;
 			}
 		}
 		&_slide{
 			padding: 0 10px;
+			@include breakpoint($maxWidth: 768px) {
+				padding: 0 5px;
+			}
 		}
 		&_form{
 			max-width: 985px;
@@ -4198,13 +4297,14 @@ select:disabled {
 		span{
 			display: block;
 			font-size: 14px;
-			line-height: 18px;
+			line-height: 17px;
 		}
-		&_d{
+		& .date_d{
 			padding: 2px 0;
 			font-size: 24px;
 			line-height: 29px;
 			font-family: $montserrat;
+			font-weight: 700;
 		}
 		&-active{
 			background: $green;
@@ -4217,17 +4317,37 @@ select:disabled {
 }
 .detail_bot{
 	padding: 0 0 60px;
+	@include breakpoint($maxWidth: 768px) {
+		padding: 0 0 45px;
+	}
 	.slick-dots{
 		justify-content: center;
 		padding-top: 20px;
-		li button{
-			background: #EBEBEB;
+		@include breakpoint($maxWidth: 768px) {
+			padding-top: 7px;
 		}
+		li {
+			@include breakpoint($maxWidth: 768px) {
+				margin: 0 4px;
+			}
+			button{
+				background: #EBEBEB;
+			}
+		}
+	}
+	.catalog-head{
+		margin-bottom: 30px;
+	}
+	.content-contacts{
+		margin-bottom: 55px;
 	}
 }
 .detail-section{
 	.catalog-head{
-		margin-top: 40px;
+		margin: 24px 0;
+		@include breakpoint($maxWidth: 768px) {
+			margin: 0;
+		}
 	}
 }
 .investments_list{
@@ -4248,9 +4368,9 @@ select:disabled {
 		line-height: 24px;
 		padding-bottom: 20px;
 		padding-left: 32px;
-		&:last-child{
-			padding-bottom: 0;
-		}
+		// &:last-child{
+		// 	padding-bottom: 0;
+		// }
 	}
 	li::before{
 		content: '';
@@ -4265,38 +4385,53 @@ select:disabled {
 }
 
 .section-characters{
-	padding: 30px 0 10px;
+	padding: 52px 0 10px;
+	@include breakpoint($maxWidth: 768px) {
+		padding: 27px 0 10px;
+	}
 }
 .characters{
-	margin-bottom: 90px;
+	margin-bottom: 120px;
 	border: 1px solid #efefef;
-	padding: 0 74px 80px;
+	padding: 0 74px 70px;
 	@include breakpoint($maxWidth: 1400px) {
-		padding: 0 30px 30px;
+		padding: 0 23px 30px;
 	}
 	@include breakpoint($maxWidth: 768px) {
-		margin-bottom: 50px;
+		margin-bottom: 60px;
+	}
+	&:last-child{
+		margin-bottom: 88px;
+		@include breakpoint($maxWidth: 768px) {
+			margin-bottom: 35px;
+		}
 	}
 	.center_title{
 		display: flex;
-		transform: translateY(-20%);
+		transform: translateY(-34%);
 		justify-content: center;
 	}
 	.section_title{
-		padding: 0 40px 60px;
+		padding: 0 40px 41px;
 		background: #fff;
 		@include breakpoint($maxWidth: 768px) {
-			padding-bottom: 32px;
+			padding-bottom: 24px;
 		}
 	}
 	&_list{
 		display: flex;
 		flex-wrap: wrap;
+		margin-left: -25px;
+		@include breakpoint($maxWidth: 1400px) {
+			margin-left: 0;
+		}
 		li{
 			font-size: 20px;
-			width: 25%;
+			width: calc(25% - 25px);
+			margin-left: 25px;
 			@include breakpoint($maxWidth: 1400px) {
 				width: 33.33%;
+				margin-left: 0;
 			}
 			@include breakpoint($maxWidth: 990px) {
 				width: 50%;
@@ -4304,6 +4439,11 @@ select:disabled {
 			@include breakpoint($maxWidth: 768px) {
 				width: 100%;
 				font-size: 16px;
+			}
+			&:last-child{
+				@include breakpoint($maxWidth: 768px) {
+					padding-bottom: 10px;
+				}	
 			}
 		}
 	}
@@ -4321,6 +4461,9 @@ select:disabled {
 		border-radius: 50%;
 		top: 50%;
 		background: #EFEFEF;
+		@include breakpoint($maxWidth: 768px) {
+			display: none;
+		}
 	}
 	&::before{
 		transform: translate(-50%, -50%);
@@ -4330,6 +4473,7 @@ select:disabled {
 		transform: translate(50%, -50%);
 		right: 0;
 	}
+	
 }
 .dib{
 	display: inline-block;
@@ -4356,16 +4500,26 @@ select:disabled {
 	}
 }
 .graph{
-	padding-bottom: 90px;
+	padding-bottom: 75px;
+	@include breakpoint($maxWidth: 768px) {
+		padding-bottom: 38px;
+	}
+	&:nth-child(2){
+		@include breakpoint($maxWidth: 768px) {
+			padding-bottom: 65px;
+		}
+	}
 	&_in{
-		width: 1290px;
-		margin: 0 auto;
-		min-height: 460px;
+		width: 1350px;
+		min-height: 480px;
 		background: #ccc;
+		@include breakpoint($maxWidth: 1370px) {
+			min-height: 450px;
+		}
 	}
 	&-wrap{
 		@include breakpoint($maxWidth: 1370px) {
-			padding-bottom: 25px;
+			padding-bottom: 20px;
 			overflow-x: scroll;
 			scrollbar-width: thin;
 			scrollbar-color: $green #F1F1F1;
@@ -4382,7 +4536,8 @@ select:disabled {
 		}
 	}
 	&_desc{
-		padding-top: 30px;
+		padding-top: 10px;
+		padding-bottom: 15px;
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
@@ -4395,6 +4550,9 @@ select:disabled {
 		font-weight: 700;
 		margin-top: 19px;
 		position: relative;
+		@include breakpoint($maxWidth: 768px) {
+			font-size: 14px;
+		}
 		&::before{
 			content: '';
 			position: absolute;
@@ -4430,23 +4588,29 @@ select:disabled {
 			}
 		}
 	}
+	.dib{
+	@include breakpoint($maxWidth: 768px) {
+		display: block;
+	}
+	}
 }
 .section-advantage{
-	padding: 90px 0;
+	padding: 90px 0 85px;
 	@include breakpoint($maxWidth: 768px) {
-		padding: 50px 0;
+		padding: 50px 0 40px;
 	}
 }
 .advantage{
 	&_items{
 		display: flex;
+		justify-content: space-between;
 		@include breakpoint($maxWidth: 990px) {
 			flex-wrap: wrap;
 			justify-content: space-around;
 		}
 	}
 	&_item{
-		width: 20%;
+		width: calc(20% - 40px);
 		@include breakpoint($maxWidth: 990px) {
 			width: 30%;
 			padding-bottom: 40px;
@@ -4462,7 +4626,7 @@ select:disabled {
 			display: block;
 			height: 80px;
 			width: 80px;
-			margin: 0 auto 53px;
+			margin: 0 auto 56px;
 			@include breakpoint($maxWidth: 990px) {
 				margin-bottom: 0;
 			}
@@ -4483,7 +4647,7 @@ select:disabled {
 		text-transform: capitalize;
 		padding-top: 35px;
 		@include breakpoint($maxWidth: 768px) {
-			padding-top: 20px;
+			padding-top: 22px;
 			font-size: 13px;
 			max-width: 150px;
 		}
@@ -4521,7 +4685,9 @@ select:disabled {
 		display: block;	
 		font-weight: 700;
 		line-height: 28px;
+		padding-bottom: 5px;
 		@include breakpoint($maxWidth: 768px) {
+			padding-bottom: 0;
 			line-height: 21px;
 		}
 	}
@@ -4555,7 +4721,7 @@ select:disabled {
 }
 .layout{
 	border: 1px solid #EFEFEF;
-	padding: 32px 45px;
+	padding: 30px 45px;
 	position: relative;
 	@include breakpoint($maxWidth: 1200px) {
 		padding: 25px;
@@ -4573,10 +4739,10 @@ select:disabled {
 	}
 	.main_ul{
 		font-size: 20px;
-		line-height: 40px;
-		max-width: 480px;
-		width: 100%;
-		padding: 60px 60px 200px 0;
+    line-height: 40px;
+    max-width: 474px;
+    width: 100%;
+    padding: 74px 57px 200px 0;
 		@include breakpoint($maxWidth: 1200px) {
 			padding: 30px 20px 200px 0;
 		}
@@ -4596,7 +4762,7 @@ select:disabled {
 	}
 	.main_img{
 		width: calc(100% - 500px);
-		max-width: 780px;
+		max-width: 782px;
 		@include breakpoint($maxWidth: 990px) {
 			width: 100%;
 			max-width: 450px;
@@ -4612,18 +4778,21 @@ select:disabled {
 		}
 	}
 	&_nav{
-		max-width: 420px;
+		max-width: 418px;
 		width: 100%;
 		position: absolute;
-		bottom: 105px;
+		bottom: 110px;
 		right: 105px;
+		@include breakpoint($maxWidth: 1400px) {
+			bottom: 80px;
+		}
 		@include breakpoint($maxWidth: 1200px) {
 			right: 45px;
 		}
 		@include breakpoint($maxWidth: 990px) {
 			position: static;
 			margin: 0 auto;
-			padding-top: 40px;
+			padding-top: 37px;
 		}
 		@include breakpoint($maxWidth: 500px) {
 			max-width: 335px;
@@ -4633,6 +4802,10 @@ select:disabled {
 			line-height: 20px;
 			text-align: center;
 			padding-bottom: 20px;
+			font-family: $montserrat;
+			@include breakpoint($maxWidth: 990px) {
+				padding-bottom: 12px;
+			}
 		}
 	}
 	&_slider-nav{
@@ -4667,12 +4840,12 @@ select:disabled {
 	.nav_in{
 		display: flex;
 		justify-content: center;
-		padding: 12px;
+		padding: 18px 12px;
 		border: 1px solid #EFEFEF;
 		transition: 0.3s;
 		cursor: pointer;
 		@include breakpoint($maxWidth: 500px) {
-			padding: 8px;
+			padding: 13px 8px;
 		}
 		&:hover{
 			@include breakpoint($minWidth: 768px) {
@@ -4980,6 +5153,9 @@ select:disabled {
 			position: sticky;
 			border-color: #EFEFEF;
 			top: 0;
+			@include breakpoint($maxWidth: 768px) {
+				top: 40px;
+			}
 			.compare_slider-main{
 				padding-bottom: 0;
 				&::before{
@@ -5169,7 +5345,7 @@ select:disabled {
 	position: absolute;
 	right: 0;
 	top: 0;
-	min-width: 55px;
+	min-width: 59px;
 	font-weight: 600;
 	font-family: $montserrat;
 	@include breakpoint($maxWidth: 768px) {
@@ -5180,10 +5356,6 @@ select:disabled {
 .currience{
 	font-size: 16px;
 	line-height: 19px;
-	padding: 3px 0;
-	@include breakpoint($maxWidth: 768px) {
-		padding: 0;
-	}
 	&-in{
 		display: flex;
 		flex-direction: column;
@@ -5205,7 +5377,7 @@ select:disabled {
 		position: relative;
 		transition: 0.3s;
 		@include breakpoint($maxWidth: 768px) {
-			padding: 3px 6px 1px;
+			padding: 0 6px;
 		}
 		&::before{
 			content: '';
@@ -5218,6 +5390,7 @@ select:disabled {
 			top: 10px;
 			right: -4px;
 			transition: 0.3s;
+			z-index: 1;
 			@include breakpoint($maxWidth: 768px) {
 				border-color: #252322 transparent transparent transparent;
 			}
@@ -5247,7 +5420,21 @@ select:disabled {
 		}
 	}
 }
-
+.add-compare{
+	cursor: pointer;
+	background: none;
+	border: none;
+	&.active{
+		color: $green-hover!important;
+		border-color: $green-hover;
+	}
+}
+.section_title__big{
+	padding-bottom: 80px;
+	@include breakpoint($maxWidth: 778px) {
+		padding-bottom: 27px;
+	}
+}
 .modal{
 	display: none;
 	background: none!important;

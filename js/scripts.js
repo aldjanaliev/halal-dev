@@ -84,11 +84,12 @@ $(document).ready(function () {
   $('.view-item-list').click(function () {
 		let thisParent = $(this).closest('.catalog-wrap')
     thisParent.find('.catalog-item,.catalog-block').addClass('wide');
-
+		thisParent.find('.catalog_in-slider').slick('refresh');
   });
   $('.view-item-cards').click(function () {
 		let thisParent = $(this).closest('.catalog-wrap')
     thisParent.find('.catalog-item,.catalog-block').removeClass('wide');
+		thisParent.find('.catalog_in-slider').slick('refresh');
   });
 
   $('.view-item-list').click(function () {
@@ -356,7 +357,8 @@ $(document).ready(function () {
 		}]
 	})
 
-	$('.js-remove-slide').on('click', function() {
+	$('.compare_slider-wrap').on('click', '.js-remove-slide', function() {
+		console.log(55)
 		let slideIndex = $(this).closest('.slick-slide').index()
 		let slideCount = $(this).closest('.slick-list').find('.slick-slide').length
 		console.log(slideCount)
@@ -365,6 +367,7 @@ $(document).ready(function () {
 			$('.compare_slider-nav').slick('slickRemove', slideIndex);
 		}
 	});
+
 	$('.js-remove-all').on('click', function() {
 		let slideCount = $('.compare_slider-main').find('.slick-slide').length
 		console.log(slideCount)
@@ -373,6 +376,12 @@ $(document).ready(function () {
 			$('.compare_slider-nav').slick('slickRemove', 1);
 		}
 	});
+
+	$('.add-compare').on('click', function(){
+		if(!$(this).hasClass('active')){
+			$(this).addClass('active')
+		}
+	})
 
 	// compare menu fixed on scroll
 	if($('.compare_slider-wrap').length != 0){
