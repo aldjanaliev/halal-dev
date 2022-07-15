@@ -377,10 +377,16 @@ $(document).ready(function () {
 		}
 	});
 
-	$('.add-compare').on('click', function(){
-		if(!$(this).hasClass('active')){
+	// paginations
+	$('.paginations').on('click', 'button', function(){
+		if(!$(this).hasClass('prev') && !$(this).hasClass('next')){
+			$('.paginations .active').removeClass('active')
 			$(this).addClass('active')
 		}
+		$('html, body').animate({
+			scrollTop: $('#scroll-pagination').offset().top
+		});
+		return false;
 	})
 
 	// compare menu fixed on scroll

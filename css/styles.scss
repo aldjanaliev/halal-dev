@@ -1433,7 +1433,9 @@ header {
   display: flex;
   justify-content: center;
 
-  a {
+  button {
+		cursor: pointer;
+		background: #fff;
     @include breakpoint($maxWidth:566px) {
       &:nth-child(5) {
         display: none;
@@ -1495,6 +1497,7 @@ header {
     font-family: $montserrat;
     color: $dark-color;
     position: relative;
+		cursor: pointer;
 
     @include breakpoint($maxWidth:768px) {
       width: 48px;
@@ -1509,11 +1512,15 @@ header {
       color: #fff;
       background: $green;
       z-index: 9;
+			&:hover{
+      background: $green-hover;
+			color: #fff;
+			}
     }
 
     &:hover {
       color: $green;
-      border-color: $green;
+      border-color: $green-hover;
       z-index: 9;
     }
   }
@@ -1870,7 +1877,8 @@ header {
       cursor: pointer;
 			margin-bottom: 0;
 			border: none;
-      &:hover {
+      &:hover,
+			&:focus {
         color: $green-hover;
       }
     }
@@ -2628,7 +2636,7 @@ footer {
 }
 
 .collections-objects-section {
-  padding-bottom: 86px;
+  padding-bottom: 121px;
   margin-top: 9px;
 
   @include breakpoint($maxWidth: 992px) {
@@ -5450,8 +5458,17 @@ select:disabled {
 }
 .wide{
 	.catalog-item__cost{
-		@include breakpoint($minWidth: 992px) {
-			width: calc(100% - 64px);
+		align-self: start;
+	}
+	.catalog-item__bottom{
+		padding: 0!important;
+	}
+	.catalog-item__price{
+		margin-right: 4px;
+	}
+	.catalog-item__information{
+		li:last-child{
+			margin-bottom: 0;
 		}
 	}
 }
@@ -5533,14 +5550,113 @@ select:disabled {
 	}
 }
 .fancybox-is-open .fancybox-bg{
-	background: rgba(0, 0, 0, 0.75);
-	backdrop-filter: blur(20px);
-	opacity: 1;
+	background: rgba(0, 0, 0, 0.9);
 }
 .fancybox-container{
-	background: url(../images/modal-bg.webp) center no-repeat;
-	background-size: 100% 100%;
+	backdrop-filter: blur(20px);
 }
 .fancybox-close-small{
 	display: none;
+}
+.catalogs{
+	.section{
+		@include breakpoint($maxWidth: 778px) {
+			padding: 25px 0 33px;
+		}
+	}
+	.section-filter-content{
+		padding-top: 160px;
+		padding-bottom: 107px;
+		@include breakpoint($maxWidth: 778px) {
+			padding-top: 100px;
+   	  padding-bottom: 4px;
+		}
+	}
+	.section--filter-small h1{
+		@include breakpoint($maxWidth: 778px) {
+			margin: 24px 0 45px;
+		}
+	}
+	.filter-menu{
+		margin-bottom: 100px;
+		@include breakpoint($maxWidth: 778px) {
+			margin-bottom: 47px;
+		}
+		li{
+			@include breakpoint($maxWidth: 778px) {
+				margin-right: 0;
+			}
+		}
+	}
+	.slick-dots{
+		position: absolute;
+    top: 282px;
+    left: 0;
+    right: 0;
+		li{
+			button{
+				width: 12px;
+				height: 12px;
+				border-radius: 2px;
+				border: 2px solid #fff;
+				border-radius: 50%;
+				background-color: #fff;
+				opacity: 1;
+			}
+			&.slick-active{
+				button{
+					background: $green;
+				}
+			}
+		}
+	}
+	.catalog-item__bottom{
+		padding-top: 20px;
+		@include breakpoint($maxWidth: 778px) {
+			padding-top: 7px;
+		}
+	}
+	.catalog-block{
+		margin-bottom: 28px;
+		@include breakpoint($maxWidth: 778px) {
+			margin-bottom: 23px;
+		}
+		&:last-child{
+			@include breakpoint($maxWidth: 778px) {
+				margin-bottom: 9px;
+			}
+		}
+		.item{
+			margin-bottom: 22px;
+			@include breakpoint($maxWidth: 778px) {
+				margin-bottom: 11px;
+			}
+		}
+	}
+	.content-contacts{
+		margin-bottom: 46px;
+	}
+	.collections-objects{
+		padding: 70px 35px 50px 7px;
+		@include breakpoint($maxWidth: 778px) {
+			padding: 51px 0 29px 25px;
+		}
+		ul{
+			justify-content: space-between;
+			li{
+				letter-spacing: 0.04em;
+				max-width: 325px;
+				margin-bottom: 18px;
+				margin-left: 50px;
+				@include breakpoint($maxWidth: 1270px) {
+					margin-left: 20px;
+				}
+				@include breakpoint($maxWidth: 778px) {
+					margin-left: 0;
+					max-width: 100%;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	} 
 }
