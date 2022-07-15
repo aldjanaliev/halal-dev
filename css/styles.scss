@@ -255,6 +255,7 @@ h1 {
   line-height: 113%;
   color: #FFFFFF;
   margin: 50px 0;
+	letter-spacing: 0.02em;
 
   @include breakpoint($maxWidth: 992px) {
     text-align: center;
@@ -342,7 +343,7 @@ h2 {
       min-height: auto;
       padding-top: 70px;
 			h1 {
-				margin: 24px 0 32px 0;
+				margin: 24px 0 36px 0;
 			}
       @include breakpoint($maxWidth: 992px) {
         padding-top: 0;
@@ -2755,6 +2756,7 @@ footer {
 
   li {
     margin-bottom: 10px;
+		margin-right: 22px;
 
     @include breakpoint($maxWidth: 566px) {
       margin-bottom: 6px;
@@ -4862,10 +4864,36 @@ select:disabled {
 
 .compare{
 	.filter-menu{
-		margin-bottom: 37px;
+		margin-bottom: 26px;
+		@include breakpoint($maxWidth: 768px) {
+			margin-bottom: 22px;
+		}
+		li{
+			@include breakpoint($maxWidth: 768px) {
+				margin-right: 0;
+			}
+		}
 	}
 	.content-contacts{
-		padding-top: 40px;
+		padding-top: 53px;
+		margin-bottom: 60px;
+		@include breakpoint($maxWidth: 768px) {
+			padding-top: 27px;
+			margin-bottom: 41px;
+		}
+	}
+	.section-filter-content{
+		padding-bottom: 212px;
+		padding-top: 160px;
+		@include breakpoint($maxWidth: 768px) {
+			padding-top: 126px;
+			padding-bottom: 149px;
+		}
+		h1{
+			@include breakpoint($maxWidth: 768px) {
+				margin-bottom: 48px;
+			}
+		}
 	}
 	.tab-body{
 		display: flex;
@@ -4873,6 +4901,9 @@ select:disabled {
 		line-height: 120%;
 		padding-bottom: 20px;
 		color: #fff;
+		@include breakpoint($maxWidth: 768px) {
+			justify-content: center;
+		}
 		span{
 			display: block;
 			padding-right: 8px;
@@ -4898,6 +4929,9 @@ select:disabled {
 		box-shadow: none;
 		background: transparent;
 		&__information{
+			li{
+				margin-bottom: 10px;
+			}
 			.square{
 				padding-right: 7px;
 				&::before{
@@ -4911,7 +4945,7 @@ select:disabled {
 			font-weight: 700;
 			font-family: $montserrat;
 			text-align: center;
-			padding: 20px 0;
+			padding: 17px 0;
 			font-size: 24px;
 			line-height: 120%;
 		}
@@ -4927,6 +4961,10 @@ select:disabled {
 			background: none;
 			outline: none;
 			transition: 0.3s;
+			@include breakpoint($maxWidth: 768px) {
+				font-size: 12px;
+				line-height: 120%;
+			}
 			&:hover{
 				color: #F39797;
 			}
@@ -4939,7 +4977,7 @@ select:disabled {
 			}
 		}
 		&__content-wrap{
-			padding-top: 40px;
+			padding-top: 10px;
 		}
 		&__content{
 			border-right: 1px solid #EFEFEF;;
@@ -4949,9 +4987,6 @@ select:disabled {
 			color: $green;
 			margin-bottom: 25px;
 		}
-	}
-	.section-filter-content{
-		padding-bottom: 150px;
 	}
 	&_slider-main{
 		padding: 0 17px;
@@ -4991,7 +5026,7 @@ select:disabled {
 				width: 36px;
 				height: 36px;
 				background-size: 12px 12px;
-				top: 70px;
+				top: 62px;
 			}
 		}
 		.slick-next{
@@ -5055,7 +5090,7 @@ select:disabled {
 				& span{
 					@include breakpoint($maxWidth: 768px) {
 						display: block;
-						padding-bottom: 4px;
+						padding-bottom: 5px;
 						color: #B9B9B9;
 					}
 				}
@@ -5063,10 +5098,6 @@ select:disabled {
 					color: inherit;
 					display: inline-block;
 				}
-			}
-			&__remove{
-				font-size: 12px;
-				line-height: 120%;
 			}
 			&__total{
 				@include breakpoint($maxWidth: 768px) {
@@ -5200,15 +5231,16 @@ select:disabled {
 		right: 25px;
 		@include breakpoint($maxWidth: 768px) {
 			right: 17px;
+			top: 10px;
 		}
 		span{
 			left: 0;
 		}
 	}
 	.block{
-		padding-bottom: 50px;
+		padding-bottom: 45px;
 		@include breakpoint($maxWidth: 768px) {
-			padding-bottom: 25px;
+			padding-bottom: 20px;
 		}
 		&_title{
 			font-family: $montserrat;
@@ -5219,8 +5251,9 @@ select:disabled {
 			text-transform: capitalize;
 			color: $black-color;
 			padding-bottom: 50px;
+			letter-spacing: 0.02em;
 			@include breakpoint($maxWidth: 768px) {
-				padding-bottom: 25px;
+				padding-bottom: 30px;
 				font-size: 20px;
 				line-height: 120%;
 			}
@@ -5279,10 +5312,10 @@ select:disabled {
 				overflow: hidden;
 				font-size: 20px;
 				line-height: 1;
-				padding: 22px 0;
+				padding: 22px 0 18px;
 				@include breakpoint($maxWidth: 768px) {
 					font-size: 13px;
-					padding: 17px 0;
+					padding: 16px 0 24px;
 				}
 			}
 			&_ic{
@@ -5405,8 +5438,10 @@ select:disabled {
 	margin-top: -150px;
 	position: relative;
 	z-index: 10;
+	padding-bottom: 74px;
   @include breakpoint($maxWidth: 1200px) {
 		margin-top: -90px;
+		padding-bottom: 28px;
 	}
 	&.active{
 		background: #fff;

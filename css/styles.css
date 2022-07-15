@@ -165,6 +165,7 @@ h1 {
   line-height: 113%;
   color: #FFFFFF;
   margin: 50px 0;
+  letter-spacing: 0.02em;
 }
 
 @media (max-width: 992px) {
@@ -268,7 +269,7 @@ h2 {
 }
 
 .section--filter-small h1 {
-  margin: 24px 0 32px 0;
+  margin: 24px 0 36px 0;
 }
 
 @media (max-width: 992px) {
@@ -3068,6 +3069,7 @@ footer:before {
 
 .filter-menu li {
   margin-bottom: 10px;
+  margin-right: 22px;
 }
 
 @media (max-width: 566px) {
@@ -5654,11 +5656,49 @@ select:disabled {
 }
 
 .compare .filter-menu {
-  margin-bottom: 37px;
+  margin-bottom: 26px;
+}
+
+@media (max-width: 768px) {
+  .compare .filter-menu {
+    margin-bottom: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .compare .filter-menu li {
+    margin-right: 0;
+  }
 }
 
 .compare .content-contacts {
-  padding-top: 40px;
+  padding-top: 53px;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .compare .content-contacts {
+    padding-top: 27px;
+    margin-bottom: 41px;
+  }
+}
+
+.compare .section-filter-content {
+  padding-bottom: 212px;
+  padding-top: 160px;
+}
+
+@media (max-width: 768px) {
+  .compare .section-filter-content {
+    padding-top: 126px;
+    padding-bottom: 149px;
+  }
+}
+
+@media (max-width: 768px) {
+  .compare .section-filter-content h1 {
+    margin-bottom: 48px;
+  }
 }
 
 .compare .tab-body {
@@ -5669,6 +5709,14 @@ select:disabled {
   line-height: 120%;
   padding-bottom: 20px;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .compare .tab-body {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .compare .tab-body span {
@@ -5701,6 +5749,10 @@ select:disabled {
   background: transparent;
 }
 
+.compare .catalog-item__information li {
+  margin-bottom: 10px;
+}
+
 .compare .catalog-item__information .square {
   padding-right: 7px;
 }
@@ -5715,7 +5767,7 @@ select:disabled {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   text-align: center;
-  padding: 20px 0;
+  padding: 17px 0;
   font-size: 24px;
   line-height: 120%;
 }
@@ -5735,6 +5787,13 @@ select:disabled {
   transition: 0.3s;
 }
 
+@media (max-width: 768px) {
+  .compare .catalog-item__remove {
+    font-size: 12px;
+    line-height: 120%;
+  }
+}
+
 .compare .catalog-item__remove:hover {
   color: #F39797;
 }
@@ -5749,7 +5808,7 @@ select:disabled {
 }
 
 .compare .catalog-item__content-wrap {
-  padding-top: 40px;
+  padding-top: 10px;
 }
 
 .compare .catalog-item__content {
@@ -5760,10 +5819,6 @@ select:disabled {
   text-align: center;
   color: #00AF70;
   margin-bottom: 25px;
-}
-
-.compare .section-filter-content {
-  padding-bottom: 150px;
 }
 
 .compare_slider-main {
@@ -5819,7 +5874,7 @@ select:disabled {
     width: 36px;
     height: 36px;
     background-size: 12px 12px;
-    top: 70px;
+    top: 62px;
   }
 }
 
@@ -5901,7 +5956,7 @@ select:disabled {
 @media (max-width: 768px) {
   .compare_slider-main .catalog-item__information li span {
     display: block;
-    padding-bottom: 4px;
+    padding-bottom: 5px;
     color: #B9B9B9;
   }
 }
@@ -5909,11 +5964,6 @@ select:disabled {
 .compare_slider-main .catalog-item__information li .square {
   color: inherit;
   display: inline-block;
-}
-
-.compare_slider-main .catalog-item__remove {
-  font-size: 12px;
-  line-height: 120%;
 }
 
 @media (max-width: 768px) {
@@ -6098,6 +6148,7 @@ select:disabled {
 @media (max-width: 768px) {
   .compare .detail_title-raiting {
     right: 17px;
+    top: 10px;
   }
 }
 
@@ -6106,12 +6157,12 @@ select:disabled {
 }
 
 .compare .block {
-  padding-bottom: 50px;
+  padding-bottom: 45px;
 }
 
 @media (max-width: 768px) {
   .compare .block {
-    padding-bottom: 25px;
+    padding-bottom: 20px;
   }
 }
 
@@ -6124,11 +6175,12 @@ select:disabled {
   text-transform: capitalize;
   color: #100D05;
   padding-bottom: 50px;
+  letter-spacing: 0.02em;
 }
 
 @media (max-width: 768px) {
   .compare .block_title {
-    padding-bottom: 25px;
+    padding-bottom: 30px;
     font-size: 20px;
     line-height: 120%;
   }
@@ -6208,13 +6260,13 @@ select:disabled {
   overflow: hidden;
   font-size: 20px;
   line-height: 1;
-  padding: 22px 0;
+  padding: 22px 0 18px;
 }
 
 @media (max-width: 768px) {
   .compare_slider-nav .item_txt {
     font-size: 13px;
-    padding: 17px 0;
+    padding: 16px 0 24px;
   }
 }
 
@@ -6374,11 +6426,13 @@ select:disabled {
   margin-top: -150px;
   position: relative;
   z-index: 10;
+  padding-bottom: 74px;
 }
 
 @media (max-width: 1200px) {
   .section--compare {
     margin-top: -90px;
+    padding-bottom: 28px;
   }
 }
 
