@@ -1891,7 +1891,10 @@ header {
     align-items: center;
     justify-content: space-between;
     // height: 66px;
-		padding-top: 8px;
+		padding-top: 16px;
+    @include breakpoint($maxWidth: 992px) {
+			padding-top: 8px;
+		}
   }
 
   // .catalog-item__contacts
@@ -2014,7 +2017,7 @@ header {
 
   &__image {
     width: 100%;
-    margin-bottom: 41px;
+    margin-bottom: 57px;
     min-height: 413px;
 
     img {
@@ -4016,7 +4019,6 @@ select:disabled {
 		height: 100%;
 		.slick-slide{
 			margin: 0;
-			padding: 0;
 			height: 100%;
 		}
 		.slick-dots{
@@ -5659,4 +5661,117 @@ select:disabled {
 			}
 		}
 	} 
+}
+
+
+.index{
+	.section-filter-content{
+		padding-top: 361px;
+		padding-bottom: 118px;
+		min-height: 680px;
+		height: auto;
+		@include breakpoint($maxWidth: 778px) {
+			padding-top: 153px;
+			padding-bottom: 34px;
+		}
+	}
+	.section--filter{
+		min-height: 680px;
+	}
+	h1{
+		letter-spacing: 0;
+		span{
+			@include breakpoint($maxWidth: 778px) {
+				display: block;
+			}
+		}
+	}
+	.section--about{
+		@include breakpoint($maxWidth: 778px) {
+			padding-bottom: 45px;
+		}
+		h2{
+			@include breakpoint($maxWidth: 778px) {
+				padding-top: 0;
+			}
+		}
+		.about__text{
+			@include breakpoint($maxWidth: 778px) {
+				margin-bottom: -166px;
+			}
+		}
+		.about__image{
+			@include breakpoint($maxWidth: 778px) {
+				margin-bottom: 46px;
+			}
+		}
+	}
+	.section--form{
+		.form-block{
+			@include breakpoint($maxWidth: 778px) {
+				padding-bottom: 50px;
+			}
+		}
+		h2{
+			@include breakpoint($maxWidth: 778px) {
+				margin-bottom: 32px;
+			}
+		}
+	}
+}
+.section-cards{
+	padding-bottom: 10px;
+	h2{
+		letter-spacing: 0.02em;
+	}
+	.catalog-block{
+		@include breakpoint($maxWidth: 992px) {
+			padding-bottom: 30px;
+		}
+	}
+	.content-contacts{
+		@include breakpoint($maxWidth: 992px) {
+			margin-top: 10px;
+		}
+	}
+}
+.section-ideal{
+	padding-top: 102px;
+	@include breakpoint($maxWidth: 778px) {
+		padding-top: 25px;
+		padding-bottom: 25px!important;
+	}
+	h2 span{
+		@include breakpoint($maxWidth: 778px) {
+			display: block;
+		}
+	}
+}
+.catalog_in-slider{
+	.slick-slide{
+		margin: 0;
+	}
+	.slick-dots{
+		position: absolute;
+		bottom: 12px;
+		right: 0;
+		@include breakpoint($maxWidth: 992px) {
+			left: 0;
+			top: 200px;
+			bottom: auto!important;
+			justify-content: center!important;
+		}
+		@include breakpoint($maxWidth: 778px) {
+			top: 210px;
+		}
+		li{
+			margin: 0 6px;
+			button{
+				width: 12px;
+				height: 12px;
+				opacity: 1;
+				border: 2px solid #fff;
+			}
+		}
+	}
 }

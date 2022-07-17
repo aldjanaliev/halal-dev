@@ -300,15 +300,17 @@ $(document).ready(function () {
 	})
 
 	$(window).on("load resize", function(){
-		var $wrapperSlider = $('.catalog-slider'),
-		wrapperSlider = $wrapperSlider[0];
+		// var $wrapperSlider = $('.catalog-slider'),
+		// wrapperSlider = $wrapperSlider[0];
 		if (document.documentElement.clientWidth < 992) {
-			$('.catalog_in-slider').on('mousedown touchmove', function(){
+			$('.catalog-slider').find('.catalog_in-slider').on('mousedown touchmove', function(){
+				let wrapperSlider = $(this).closest('.catalog-slider')[0]
 				wrapperSlider.slick.setOption({
 					swipe: false
 				})
 			})
-			$('.catalog_in-slider').on('afterChange', function(event, slick){
+			$('.catalog-slider').find('.catalog_in-slider').on('afterChange', function(event, slick){
+				let wrapperSlider = $(this).closest('.catalog-slider')[0]
 				wrapperSlider.slick.setOption({
 					swipe: true
 				})
