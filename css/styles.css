@@ -2895,6 +2895,10 @@ footer:before {
   z-index: 2;
 }
 
+.add-compare:focus {
+  color: #03EA97;
+}
+
 .footer-content {
   position: relative;
   z-index: 9;
@@ -4064,7 +4068,7 @@ footer:before {
 }
 
 .detail_about .about_img {
-  width: calc(100% - 676px);
+  width: calc(100% - 688px);
   max-width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4539,7 +4543,7 @@ footer:before {
 
 @media (max-width: 768px) {
   .characters .section_title {
-    padding-bottom: 24px;
+    padding: 0 20px 24px;
   }
 }
 

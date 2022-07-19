@@ -2445,7 +2445,9 @@ footer {
   }
 }
 
-
+.add-compare:focus{
+	color: $green-hover;
+}
 
 .footer-content {
   position: relative;
@@ -3381,7 +3383,7 @@ footer {
 		width: 100%;
 		margin: 0;
 		&_img{
-			width: calc(100% - 676px);
+			width: calc(100% - 688px);
 			max-width: 500px;
 			display: flex;
 			@include breakpoint($maxWidth: 1200px) {
@@ -3710,7 +3712,7 @@ footer {
 		padding: 0 40px 41px;
 		background: #fff;
 		@include breakpoint($maxWidth: 768px) {
-			padding-bottom: 24px;
+			padding: 0 20px 24px;
 		}
 	}
 	&_list{
