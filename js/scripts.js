@@ -366,10 +366,13 @@ $(document).ready(function () {
 			var scroll = $(window).scrollTop() 
 			if (scroll > offset) {
 				$('.section--compare').addClass('active')
-				$('.compare_slider-wrap').addClass('active')	
-			} else if(scroll < offset - 600){
+				$('.compare_slider-wrap').addClass('active')
+				$('section').css('padding-bottom', 160 + 'px')
+			} else if(scroll < offset ){
 				$('.section--compare').removeClass('active')
 				$('.compare_slider-wrap').removeClass('active')
+				$('section').css('padding-bottom', 0)
+
 			}
 		});
 	}
