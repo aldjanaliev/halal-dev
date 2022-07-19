@@ -4769,9 +4769,6 @@ footer {
 			@include breakpoint($maxWidth: 1200px) {
 				padding-top: 380px;
 			}
-			@include breakpoint($maxWidth: 992px) {
-				padding-top: 450px;
-			}
 			@include breakpoint($maxWidth: 768px) {
 				padding-top: 300px;
 			}
@@ -5115,7 +5112,3 @@ footer {
 .catalog-item__btn:focus{
 	background: $green-hover;
 }
-// .footer-compare{
-// 	height: 0;
-// 	overflow: hidden;
-// }

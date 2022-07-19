@@ -6003,12 +6003,6 @@ footer:before {
   }
 }
 
-@media (max-width: 992px) {
-  .section--compare.active .content-contacts {
-    padding-top: 450px;
-  }
-}
-
 @media (max-width: 768px) {
   .section--compare.active .content-contacts {
     padding-top: 300px;
