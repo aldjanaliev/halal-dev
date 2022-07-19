@@ -148,10 +148,14 @@ $(document).ready(function () {
 		}
 	})
 	
+	$('.section_title').on('click', function(){
+		console.log(123)
+	})
 
 	// ==============
 	$('.currience-in').slideUp(0)
-	$('.currience_title').on('click', function(){
+	$('.currience-choose').on('click', '.currience_title', function(){
+		console.log(666)
 		let thisParent = $(this).closest('.currience-choose')
 		if($(this).hasClass('currience_title__active')){
 			$(this).removeClass('currience_title__active')
@@ -176,7 +180,6 @@ $(document).ready(function () {
 		$(document).mouseup( function(e){
 			if($('.currience_title__active').length != 0){
 				let elParent = $('.currience_title__active').closest('.currience-choose')
-				console.log(elParent)
 				if ( !elParent.is(e.target) && elParent.has(e.target).length === 0) {
 					$('.currience-in').slideUp(300)
 					$('.currience_title').removeClass('currience_title__active')
@@ -405,7 +408,6 @@ $(document).ready(function () {
 		let thisParent = $(this).closest('.catalog-wrap')
     thisParent.find('.view-item').addClass('active');
     thisParent.find('.view-item-list').removeClass('active');
-
   });
 
 
@@ -479,6 +481,29 @@ $(document).ready(function () {
 			},700)
 
 		}
+
+		$('.catalog-item__cost').on('click', '.currience_title', function(){
+			console.log(666)
+			let thisParent = $(this).closest('.currience-choose')
+			if($(this).hasClass('currience_title__active')){
+				$(this).removeClass('currience_title__active')
+				thisParent.find('.currience-in').slideUp(300)
+			} else{
+				$(this).addClass('currience_title__active')
+				thisParent.find('.currience-in').slideDown(300)
+				closeSubMenu()
+			}
+		})
+
+		$('.catalog-item__cost').on('click', '.currience_item', function(){
+			let thisParent = $(this).closest('.currience-choose')
+			thisParent.find('.currience-in').slideUp(300)
+			thisParent.find('.currience_item__active').removeClass('currience_item__active')
+			$(this).addClass('currience_item__active')
+			thisParent.find('.currience_title').text($(this).text())
+			thisParent.find('.currience_title__active').removeClass('currience_title__active')
+		})
+		
 	});
 
 
