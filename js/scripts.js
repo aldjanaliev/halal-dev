@@ -360,21 +360,33 @@ $(document).ready(function () {
 	// compare menu fixed on scroll
 	if($('.compare_slider-wrap').length != 0){
 		var offset = $('.compare_slider-wrap').offset().top;
+		console.log(offset)
 		$(window).scroll(function() {
-			var scroll = $(window).scrollTop()
-			// var offset = $('#slider-fixed').offset().top + $('.catalog-item__image').eq(0).height();
-		 
+			var scroll = $(window).scrollTop() 
 			if (scroll > offset) {
 				$('.section--compare').addClass('active')
-				$('.compare_slider-wrap').addClass('active')
-				$('#slider-fixed .catalog-item__information').slideUp(0)			
-			} else{
+				$('.compare_slider-wrap').addClass('active')	
+			} else if(scroll < offset){
 				$('.section--compare').removeClass('active')
 				$('.compare_slider-wrap').removeClass('active')
-				$('#slider-fixed .catalog-item__information').slideDown(300)
 			}
 		});
 	}
+
+	// header fixed
+	var offset = $('section').eq(1).offset().top - 56;
+	console.log(offset)
+	$(window).scroll(function() {
+		var scroll = $(window).scrollTop() 
+		if (scroll > offset) {
+			$('.header-content').addClass('active')
+		} else if(scroll < offset){
+			$('.header-content').removeClass('active')
+		}
+	});
+	
+	
+
 
 
 	// === cлайд внутри слайдера
@@ -479,7 +491,6 @@ $(document).ready(function () {
 				});
 
 			},700)
-
 		}
 
 		$('.catalog-item__cost').on('click', '.currience_title', function(){

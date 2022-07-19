@@ -355,12 +355,18 @@ h2 {
     height: 40px;
     padding: 0 20px;
   }
-	@include breakpoint($maxWidth: 768px) {
+}
+.header-content.active{
+  @include breakpoint($maxWidth: 768px) {
 		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
-		z-index: 100;
+		z-index: 1000;
+		margin-top: 0;
+		padding: 8px 20px 7px;
+		background: #FFFFFF;
+		box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 	}
 }
 
@@ -448,7 +454,6 @@ header {
 
   @include breakpoint($maxWidth: 768px) {
     padding: 24px 20px;
-		margin-top: 40px;
   }
 
   &__selects {
@@ -4488,7 +4493,7 @@ footer {
 			border-color: #EFEFEF;
 			top: 0;
 			@include breakpoint($maxWidth: 768px) {
-				top: 40px;
+				top: 56px;
 			}
 			.compare_slider-main{
 				padding-bottom: 0;
@@ -4497,6 +4502,9 @@ footer {
 				}
 			}
 			.catalog-item{
+				&__information{
+					display: none;
+				}
 				&__title{
 					margin-bottom: 13px;
 					@include breakpoint($maxWidth: 768px) {
@@ -4515,10 +4523,10 @@ footer {
 				&__image{
 					height: 0;
 				}
-				&__remove{
-					padding: 0 0 30px;
+				&__content{
+					padding-bottom: 30px;
 					@include breakpoint($maxWidth: 768px) {
-						padding: 0 0 14px;
+						padding-bottom: 14px;
 					}
 				}
 			}
@@ -5085,6 +5093,7 @@ footer {
 }
 
 .btn:focus,
+.btn:hover,
 .catalog-item__btn:focus{
 	background: $green-hover;
 }
