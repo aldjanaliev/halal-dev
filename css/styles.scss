@@ -4761,6 +4761,24 @@ footer {
 	}
 	&.active{
 		background: #fff;
+		.content-contacts{
+			padding-top: 380px;
+			@include breakpoint($maxWidth: 1400px) {
+				padding-top: 400px;
+			}
+			@include breakpoint($maxWidth: 1200px) {
+				padding-top: 380px;
+			}
+			@include breakpoint($maxWidth: 992px) {
+				padding-top: 450px;
+			}
+			@include breakpoint($maxWidth: 768px) {
+				padding-top: 300px;
+			}
+			@include breakpoint($maxWidth: 560px) {
+				padding-top: 250px;
+			}
+		}
 	}
 }
 .wide{

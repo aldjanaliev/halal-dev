@@ -5987,6 +5987,40 @@ footer:before {
   background: #fff;
 }
 
+.section--compare.active .content-contacts {
+  padding-top: 380px;
+}
+
+@media (max-width: 1400px) {
+  .section--compare.active .content-contacts {
+    padding-top: 400px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .section--compare.active .content-contacts {
+    padding-top: 380px;
+  }
+}
+
+@media (max-width: 992px) {
+  .section--compare.active .content-contacts {
+    padding-top: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section--compare.active .content-contacts {
+    padding-top: 300px;
+  }
+}
+
+@media (max-width: 560px) {
+  .section--compare.active .content-contacts {
+    padding-top: 250px;
+  }
+}
+
 .wide .catalog-item__cost {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
