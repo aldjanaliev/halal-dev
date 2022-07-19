@@ -791,7 +791,8 @@ header {
     border-radius: 50%;
   }
 
-  &:hover {
+  &:hover,
+	&:focus {
     background: #00BC78;
   }
 	&-white{
@@ -2126,7 +2127,8 @@ header {
     }
   }
 
-  &:hover {
+  &:hover,
+	&:focus {
     background: $green;
     color: #fff;
 
@@ -2446,7 +2448,8 @@ footer {
 }
 
 .add-compare:focus{
-	color: $green-hover;
+	color: $green-hover!important;
+	border-color: $green-hover!important;
 }
 
 .footer-content {
@@ -3568,6 +3571,12 @@ footer {
 	}
 	.slick-arrow{
 		background: url(../images/order-arrow.svg) left center no-repeat;
+		&:hover{
+			background-image: url(../images/order-arrow-hover.svg);
+		}
+		&.slick-disabled{
+			background-image: url(../images/order-arrow-grey.svg);
+		}
 	}
 	.slick-prev{
 		left: 0;
@@ -4468,7 +4477,6 @@ footer {
 	}
 	.compare_slider-wrap{
 		border-bottom: 1px solid transparent;
-		transition: 0.3s;
 		@include breakpoint($maxWidth: 768px) {
 			max-width: 600px;
 			margin: 0 auto;
@@ -4495,7 +4503,12 @@ footer {
 						padding-top: 16px;
 					}
 				}
-				&__total,
+				&__total{
+					padding: 0 0 20px;
+					@include breakpoint($maxWidth: 768px) {
+						padding-bottom: 4px;
+					}
+				}
 				&__content-wrap{
 					padding: 0;
 				}
@@ -4503,9 +4516,9 @@ footer {
 					height: 0;
 				}
 				&__remove{
-					padding: 20px 0 30px;
+					padding: 0 0 30px;
 					@include breakpoint($maxWidth: 768px) {
-						padding: 4px 0 14px;
+						padding: 0 0 14px;
 					}
 				}
 			}
@@ -4732,7 +4745,7 @@ footer {
 .section--compare{
 	margin-top: -150px;
 	position: relative;
-	z-index: 10;
+	z-index: 20;
 	padding-bottom: 74px;
   @include breakpoint($maxWidth: 1200px) {
 		margin-top: -90px;
@@ -4740,7 +4753,6 @@ footer {
 	}
 	&.active{
 		background: #fff;
-		padding-top: 50px;
 	}
 }
 .wide{
@@ -5070,4 +5082,9 @@ footer {
 			}
 		}
 	}
+}
+
+.btn:focus,
+.catalog-item__btn:focus{
+	background: $green-hover;
 }

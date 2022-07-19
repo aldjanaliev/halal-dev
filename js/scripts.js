@@ -367,7 +367,7 @@ $(document).ready(function () {
 			if (scroll > offset) {
 				$('.section--compare').addClass('active')
 				$('.compare_slider-wrap').addClass('active')
-				$('#slider-fixed .catalog-item__information').slideUp(300)			
+				$('#slider-fixed .catalog-item__information').slideUp(0)			
 			} else{
 				$('.section--compare').removeClass('active')
 				$('.compare_slider-wrap').removeClass('active')

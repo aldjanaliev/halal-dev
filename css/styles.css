@@ -911,7 +911,7 @@ header .logo-mobile svg:hover {
   border-radius: 50%;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
   background: #00BC78;
 }
 
@@ -2534,12 +2534,12 @@ header .logo-mobile svg:hover {
   }
 }
 
-.contact-item:hover {
+.contact-item:hover, .contact-item:focus {
   background: #00AF70;
   color: #fff;
 }
 
-.contact-item:hover .icon svg {
+.contact-item:hover .icon svg, .contact-item:focus .icon svg {
   color: #fff;
 }
 
@@ -2896,7 +2896,8 @@ footer:before {
 }
 
 .add-compare:focus {
-  color: #03EA97;
+  color: #03EA97 !important;
+  border-color: #03EA97 !important;
 }
 
 .footer-content {
@@ -4343,6 +4344,14 @@ footer:before {
   background: url(../images/order-arrow.svg) left center no-repeat;
 }
 
+.detail_order .slick-arrow:hover {
+  background-image: url(../images/order-arrow-hover.svg);
+}
+
+.detail_order .slick-arrow.slick-disabled {
+  background-image: url(../images/order-arrow-grey.svg);
+}
+
 .detail_order .slick-prev {
   left: 0;
 }
@@ -5585,8 +5594,6 @@ footer:before {
 
 .compare .compare_slider-wrap {
   border-bottom: 1px solid transparent;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 
 @media (max-width: 768px) {
@@ -5629,7 +5636,17 @@ footer:before {
   }
 }
 
-.compare .compare_slider-wrap.active .catalog-item__total, .compare .compare_slider-wrap.active .catalog-item__content-wrap {
+.compare .compare_slider-wrap.active .catalog-item__total {
+  padding: 0 0 20px;
+}
+
+@media (max-width: 768px) {
+  .compare .compare_slider-wrap.active .catalog-item__total {
+    padding-bottom: 4px;
+  }
+}
+
+.compare .compare_slider-wrap.active .catalog-item__content-wrap {
   padding: 0;
 }
 
@@ -5638,12 +5655,12 @@ footer:before {
 }
 
 .compare .compare_slider-wrap.active .catalog-item__remove {
-  padding: 20px 0 30px;
+  padding: 0 0 30px;
 }
 
 @media (max-width: 768px) {
   .compare .compare_slider-wrap.active .catalog-item__remove {
-    padding: 4px 0 14px;
+    padding: 0 0 14px;
   }
 }
 
@@ -5947,7 +5964,7 @@ footer:before {
 .section--compare {
   margin-top: -150px;
   position: relative;
-  z-index: 10;
+  z-index: 20;
   padding-bottom: 74px;
 }
 
@@ -5960,7 +5977,6 @@ footer:before {
 
 .section--compare.active {
   background: #fff;
-  padding-top: 50px;
 }
 
 .wide .catalog-item__cost {
@@ -6379,4 +6395,9 @@ footer:before {
   height: 12px;
   opacity: 1;
   border: 2px solid #fff;
+}
+
+.btn:focus,
+.catalog-item__btn:focus {
+  background: #03EA97;
 }
