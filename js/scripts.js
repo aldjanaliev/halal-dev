@@ -367,9 +367,17 @@ $(document).ready(function () {
 			if (scroll > offset) {
 				$('.section--compare').addClass('active')
 				$('.compare_slider-wrap').addClass('active')
+				$('.compare_slider-wrap .slick-arrow').css('transition','0s')
+				setTimeout(()=>{
+					$('.compare_slider-wrap .slick-arrow').css('transition','0.3s')
+				},300)
 			} else if(scroll < offset ){
 				$('.section--compare').removeClass('active')
 				$('.compare_slider-wrap').removeClass('active')
+				$('.compare_slider-wrap .slick-arrow').css('transition','0s')
+				setTimeout(()=>{
+					$('.compare_slider-wrap .slick-arrow').css('transition','0.3s')
+				},300)
 			}
 		});
 	}
