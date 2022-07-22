@@ -2026,6 +2026,10 @@ header .logo-mobile svg:hover {
   }
 }
 
+.catalog-item__image {
+  display: block;
+}
+
 @media (min-width: 993px) {
   .catalog-item.wide {
     display: -webkit-box;

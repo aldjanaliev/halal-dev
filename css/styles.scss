@@ -1663,7 +1663,10 @@ header {
   }
 
   // .catalog-item__image
-
+	&__image{
+		display: block;
+	}
+	
   &.wide {
     @include breakpoint($minWidth: 993px) {
       display: flex;
