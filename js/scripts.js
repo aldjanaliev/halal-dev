@@ -42,6 +42,8 @@ $(document).ready(function () {
 			wrap.find('.range-f').text('__ ')
 			wrap.find('.range-s').text('__ ')
 			wrap.find('.range_input').val('')
+			wrap.find('.item_more.active').removeClass('active')
+			wrap.find('.item_more-title').html('')
 			console.log(55)
 		}
 		if($(this).hasClass('filter-btn__mob-show')){
@@ -89,6 +91,36 @@ $(document).ready(function () {
 		parent.find('.active').removeClass('active')
 		$(this).addClass('active')
 	})
+
+	$('.item_more').on('click', function(){
+		let parent = $(this).closest('.item')
+		let index = $(this).attr('data-search-num')
+		if(!$(this).hasClass('active')){
+			let item = parent.find('.item_more-in')
+			let itemIn = parent.find('.item_more-title')
+			let itemLength = parent.find('.item_more-in').length
+			let text = $(this).text()
+			if(itemLength == 0){
+				itemIn.html(`<span class="item_more-in" data-sort="${index}">${text}</span>`)
+			} else {
+				item.eq(0).after(`<span class="item_more-in" data-sort="${index}">${text}</span>`)
+				let items = parent.find('.item_more-in')
+				arItems = $.makeArray(items)
+				arItems.sort(function(a, b) {
+					return $(a).data("sort") - $(b).data("sort")
+				})
+				$(itemIn).html(arItems)
+			}
+			$(this).addClass('active')
+		} else{
+			$(this).removeClass('active')
+			let itemDelete = parent.find('.item_more-in[data-sort='+ index + ']')
+			itemDelete.remove()
+		}
+	})
+
+
+
 
 	$('.select_head').on('click', function(){
 		let parent = $(this).closest('.select')
