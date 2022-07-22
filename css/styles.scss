@@ -4423,18 +4423,22 @@ footer {
 					height: 100%;
 					width: 100%;
 					justify-content: center;
-					&:hover .btn{
-						background: #fff;
-						color: $green;
-						&::before,
-						&::after{
-							background: $green;
-						}
+					transition: 0.3s;
+					&:hover{
+						background: $green-hover;
 					}
 					.btn{
 						align-self: center;
 						width: 100%;
 						max-width: 308px;
+						background: transparent;
+						&:hover{
+							color: #fff;
+						}
+						&:hover::before,
+						&:hover::after{
+							background: #fff;
+						}
 						@include breakpoint($maxWidth: 768px) {
 							text-align: center;
 							font-size: 14px;
@@ -4478,6 +4482,9 @@ footer {
 		}
 		.item_txt{
 			align-self: end;
+		}
+		.btn-white:hover{
+			background: $green;
 		}
 	}
 	.compare_slider-wrap{
@@ -5111,4 +5118,21 @@ footer {
 .btn:hover,
 .catalog-item__btn:focus{
 	background: $green-hover;
+}
+
+.top-mobile-header .move-2{
+	@include breakpoint($minWidth: 991px) {
+		display: none;
+	}
+}
+.header-content{
+	@include breakpoint($maxWidth: 992px) {
+		display: none;
+		.header-content__right{
+			display: none;
+		}
+		&.active{
+			display: block;
+		}
+	}
 }
