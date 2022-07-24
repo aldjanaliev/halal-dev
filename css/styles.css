@@ -880,8 +880,8 @@ header .logo-mobile svg:hover {
       -ms-flex-pack: center;
           justify-content: center;
   border: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   position: relative;
   border-radius: 0;
   padding: 0 30px;
@@ -924,8 +924,8 @@ header .logo-mobile svg:hover {
   border-radius: 50%;
 }
 
-.btn:hover, .btn:focus {
-  background: #00BC78;
+.btn:hover {
+  background: #03EA97;
 }
 
 .btn-white {
@@ -1241,6 +1241,12 @@ header .logo-mobile svg:hover {
   color: #03EA97;
 }
 
+.search .item_more-title {
+  display: inline-block;
+  height: 20px;
+  overflow: hidden;
+}
+
 .search .item .item_more-in {
   display: inline;
   padding-right: 8px;
@@ -1317,6 +1323,8 @@ header .logo-mobile svg:hover {
   transition: 0.3s;
   font-size: 16px;
   letter-spacing: 0.01em;
+  color: #404040;
+  font-family: "Proxima Nova", sans-serif;
 }
 
 .search .item_body .item_range input:focus {
@@ -1421,12 +1429,6 @@ header .logo-mobile svg:hover {
   padding-left: 35px;
 }
 
-@media (max-width: 1100px) {
-  .search .button-wrap {
-    display: none;
-  }
-}
-
 .search .button-wrap button {
   font-weight: 500;
   font-size: 18px;
@@ -1436,10 +1438,25 @@ header .logo-mobile svg:hover {
       -ms-grid-row-align: center;
       align-self: center;
   margin-right: 34px;
+  font-family: "Proxima Nova", sans-serif;
 }
 
 .search .button-wrap button:hover {
   color: #03EA97;
+}
+
+@media (max-width: 1100px) {
+  .search .button-wrap {
+    display: none;
+    padding-left: 0;
+  }
+  .search .button-wrap button {
+    margin: 10px auto 0;
+    padding-left: 0;
+  }
+  .search .button-wrap .filter-btn__mob-hide {
+    margin-top: 0;
+  }
 }
 
 .search .button-wrap__mobile {
@@ -1486,7 +1503,8 @@ header .logo-mobile svg:hover {
 @media (max-width: 1100px) {
   .search-wrap .filter-btn-wrap .filter_search {
     display: block;
-    width: 335px;
+    max-width: 335px;
+    width: 100%;
     margin: 0 auto;
   }
   .search-wrap .filter-btn-wrap .filter-btn.show {
@@ -6484,8 +6502,6 @@ footer:before {
   border: 2px solid #fff;
 }
 
-.btn:focus,
-.btn:hover,
 .catalog-item__btn:focus {
   background: #03EA97;
 }

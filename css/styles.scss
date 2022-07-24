@@ -765,7 +765,7 @@ header {
   align-items: center;
   justify-content: center;
   border: 0;
-  transition: 0.5s;
+  transition: 0.3s;
   position: relative;
   border-radius: 0;
   padding: 0 30px;
@@ -804,9 +804,8 @@ header {
     border-radius: 50%;
   }
 
-  &:hover,
-	&:focus {
-    background: #00BC78;
+  &:hover{
+    background: $green-hover;
   }
 	&-white{
 		background: #fff;
@@ -1038,6 +1037,11 @@ header {
 				color: $green-hover;
 			}
 		}
+		&_more-title{
+			display: inline-block;
+			height: 20px;
+			overflow: hidden;
+		}
 		.item_more-in{
 			display: inline;
 			padding-right: 8px;
@@ -1093,6 +1097,8 @@ header {
 					transition: 0.3s;
 					font-size: 16px;
 					letter-spacing: 0.01em;
+					color: #404040;
+					font-family: "Proxima Nova", sans-serif;
 					&:focus{
 						border-color: $green;
 					}
@@ -1165,10 +1171,6 @@ header {
 	.button-wrap{
 		display: flex;
 		padding-left: 35px;
-		@include breakpoint($maxWidth: 1100px) {
-			display: none;
-
-		}
 		button{
 			font-weight: 500;
 			font-size: 18px;
@@ -1176,8 +1178,20 @@ header {
 			color: #00AF70;
 			align-self: center;
 			margin-right: 34px;
+			font-family: "Proxima Nova", sans-serif;
 			&:hover{
 				color: $green-hover;
+			}
+		}
+		@include breakpoint($maxWidth: 1100px) {
+			display: none;
+			padding-left: 0;
+			button{
+				margin: 10px auto 0;
+				padding-left: 0;
+			}
+			.filter-btn__mob-hide{
+				margin-top: 0;
 			}
 		}
 		&__mobile{
@@ -1216,7 +1230,8 @@ header {
 		@include breakpoint($maxWidth: 1100px) {
 			.filter_search{
 				display: block;
-				width: 335px;
+				max-width: 335px;
+				width: 100%;
 				margin: 0 auto;
 			}
 			.filter-btn.show{
@@ -5146,8 +5161,6 @@ footer {
 	}
 }
 
-.btn:focus,
-.btn:hover,
 .catalog-item__btn:focus{
 	background: $green-hover;
 }
