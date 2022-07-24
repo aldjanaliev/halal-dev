@@ -1213,6 +1213,9 @@ header {
 	&_tab{
 		display: none;
 	}
+	.search-pb{
+		display: none;
+	}
 }
 .search-wrap{
 	position: relative;
@@ -1220,6 +1223,10 @@ header {
 	&.active{
 		.item{
 			width: 20%;
+		}
+		.search-pb{
+			height: 10px;
+			display: block;
 		}
 	}
 	.filter-btn-wrap{

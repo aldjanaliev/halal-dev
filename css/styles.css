@@ -1483,6 +1483,10 @@ header .logo-mobile svg:hover {
   display: none;
 }
 
+.search .search-pb {
+  display: none;
+}
+
 .search-wrap {
   position: relative;
   z-index: 150;
@@ -1490,6 +1494,11 @@ header .logo-mobile svg:hover {
 
 .search-wrap.active .item {
   width: 20%;
+}
+
+.search-wrap.active .search-pb {
+  height: 10px;
+  display: block;
 }
 
 .search-wrap .filter-btn-wrap {
