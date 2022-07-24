@@ -6223,6 +6223,10 @@ footer:before {
   border-color: #efefef;
 }
 
+.modal-thanks .thanks_content p {
+  color: #404040;
+}
+
 .modal_title {
   color: #404040;
 }
