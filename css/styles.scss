@@ -630,7 +630,7 @@ header {
 
         .number {
           width: 38px;
-          height: 40px;
+          height: 39px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -5245,7 +5245,6 @@ footer {
 }
 .header-content{
 	@include breakpoint($maxWidth: 992px) {
-		display: none;
 		.header-content__right{
 			display: none;
 		}
