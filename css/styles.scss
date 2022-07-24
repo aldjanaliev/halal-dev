@@ -4932,13 +4932,24 @@ footer {
 	}
 }
 .fancybox-is-open .fancybox-bg{
-	background: rgba(0, 0, 0, 0.9);
+	// background: rgba(0, 0, 0, 0.9);
+	background: #fff;
+	opacity: 1;
 }
 .fancybox-container{
-	backdrop-filter: blur(20px);
+	// backdrop-filter: blur(20px);
+}
+.form-group input{
+	border-color: #efefef;
 }
 .fancybox-close-small{
 	display: none;
+}
+.form-group textarea{
+	border-color: #efefef;
+}
+.modal_title{
+	color: #404040;
 }
 .catalogs{
 	.section{
