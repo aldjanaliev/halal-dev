@@ -4346,7 +4346,19 @@ footer {
 			padding-top: 10px;
 		}
 		&__content{
-			border-right: 1px solid #EFEFEF;;
+			border-left: 1px solid #EFEFEF;;
+			position: relative;
+			&::before{
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translate(-50%, -50%);
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				background: #efefef;
+			}
 		}
 		&__title{
 			text-align: center;
@@ -4357,19 +4369,6 @@ footer {
 	&_slider-main{
 		padding: 0 17px;
 		transition: 0.3s;
-		&::before{
-			content: '';
-			position: absolute;
-			top: 140px;
-			bottom: 0;
-			right: 0;
-			z-index: 1;
-			width: 3px;
-			background: #fff;
-			@include breakpoint($maxWidth: 768px) {
-				top: 85px;
-			}
-		}
 		@include breakpoint($maxWidth: 768px) {
 			padding: 0;
 			margin: 0 -7px;
@@ -4656,7 +4655,7 @@ footer {
 			padding: 0;
 		}
 		.item{
-			border-right: 1px solid #EFEFEF;
+			border-left: 1px solid #EFEFEF;
 			position: relative;
 			&::before{
 				content: '';
@@ -4755,6 +4754,16 @@ footer {
 			height: 100%;
 		}
 	}
+	.compare_slider-main .catalog-item__content{
+		@include breakpoint($maxWidth: 768px) {
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+	}
+	.slick-current .catalog-item__content,
+	.compare_slider-nav .slick-current .item{
+		border-left-color: transparent;
+	}
 }
 .currience-choose{
 	padding-right: 8px;
@@ -4844,6 +4853,9 @@ footer {
 			@include breakpoint($maxWidth: 560px) {
 				padding-top: 250px;
 			}
+		}
+		.catalog-item__content::before{
+			display: none;
 		}
 	}
 }
@@ -4969,9 +4981,38 @@ footer {
 	.modal_white{
 		background: #fff!important;
 		max-width: 100%;
-		height: 100%;
 		min-height: 100vh;
 		padding: 20px;
+		.modal_body{
+			position: relative;
+			&::before{
+				content: '';
+				position: absolute;
+				border-radius: 50%;
+				width: 7px;
+				height: 7px;
+				background: #efefef;
+				z-index: 10;
+				top: -3px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+		.form-dote{
+			position: relative;
+			&::before{
+				content: '';
+				position: absolute;
+				border-radius: 50%;
+				width: 7px;
+				height: 7px;
+				background: #efefef;
+				z-index: 10;
+				bottom: 1px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
 		.modal-in{
 			justify-content: center;
 			display: flex;

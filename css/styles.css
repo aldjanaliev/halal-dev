@@ -5419,7 +5419,21 @@ footer:before {
 }
 
 .compare .catalog-item__content {
-  border-right: 1px solid #EFEFEF;
+  border-left: 1px solid #EFEFEF;
+  position: relative;
+}
+
+.compare .catalog-item__content::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #efefef;
 }
 
 .compare .catalog-item__title {
@@ -5432,23 +5446,6 @@ footer:before {
   padding: 0 17px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-
-.compare_slider-main::before {
-  content: '';
-  position: absolute;
-  top: 140px;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-  width: 3px;
-  background: #fff;
-}
-
-@media (max-width: 768px) {
-  .compare_slider-main::before {
-    top: 85px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -5838,7 +5835,7 @@ footer:before {
 }
 
 .compare_slider-nav .item {
-  border-right: 1px solid #EFEFEF;
+  border-left: 1px solid #EFEFEF;
   position: relative;
 }
 
@@ -5966,6 +5963,18 @@ footer:before {
 .compare .slick-slide .item,
 .compare .slick-slide .catalog-item {
   height: 100%;
+}
+
+@media (max-width: 768px) {
+  .compare .compare_slider-main .catalog-item__content {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+.compare .slick-current .catalog-item__content,
+.compare .compare_slider-nav .slick-current .item {
+  border-left-color: transparent;
 }
 
 .currience-choose {
@@ -6101,6 +6110,10 @@ footer:before {
   .section--compare.active .content-contacts {
     padding-top: 250px;
   }
+}
+
+.section--compare.active .catalog-item__content::before {
+  display: none;
 }
 
 .wide .catalog-item__cost {
@@ -6256,9 +6269,40 @@ footer:before {
   .modal_white {
     background: #fff !important;
     max-width: 100%;
-    height: 100%;
     min-height: 100vh;
     padding: 20px;
+  }
+  .modal_white .modal_body {
+    position: relative;
+  }
+  .modal_white .modal_body::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    background: #efefef;
+    z-index: 10;
+    top: -3px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .modal_white .form-dote {
+    position: relative;
+  }
+  .modal_white .form-dote::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    background: #efefef;
+    z-index: 10;
+    bottom: 1px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   .modal_white .modal-in {
     -webkit-box-pack: center;
