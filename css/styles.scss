@@ -1228,6 +1228,9 @@ header {
 			height: 10px;
 			display: block;
 		}
+		.search-in{
+			display: block;
+		}
 	}
 	.filter-btn-wrap{
 		text-align: center;
@@ -1307,7 +1310,6 @@ header {
 			left: 0;
 			right: 0;
 			bottom: 0;
-			height: 100vh;
 			display: none;
 			background: #fff;
 			z-index: 1000;
