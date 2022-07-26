@@ -6562,6 +6562,10 @@ footer:before {
   }
 }
 
+.catalog_in-slider {
+  z-index: 1;
+}
+
 .catalog_in-slider .slick-slide {
   margin: 0;
 }
