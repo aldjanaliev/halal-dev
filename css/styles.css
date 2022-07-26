@@ -1598,7 +1598,7 @@ header .logo-mobile svg:hover {
     display: none;
     background: #fff;
     z-index: 1000;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
     overflow-y: scroll;
   }
   .search-wrap .search-in {
