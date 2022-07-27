@@ -4412,7 +4412,10 @@ footer {
 			background-color: #B5B5B5;
 			border-color: #B5B5B5;
 			cursor: default;
-			pointer-events: none;
+			&:hover{
+				background-color: #B5B5B5;
+				border-color: #B5B5B5;
+			}
 		}
 		.catalog-item{
 			&__content-wrap{
@@ -4558,6 +4561,9 @@ footer {
 			top: 0;
 			@include breakpoint($maxWidth: 768px) {
 				top: 56px;
+			}
+			.catalog-item__image{
+				overflow: hidden;
 			}
 			.compare_slider-main{
 				padding-bottom: 0;
@@ -4960,7 +4966,7 @@ footer {
 			border-radius: 50%;
 			width: 136px;
 			height: 136px;
-			margin: 0 auto;
+			margin: 88px auto 0;
 			background: $green url(../images/success-big.png) center no-repeat;
 		}
 		&_content{
@@ -5060,7 +5066,7 @@ footer {
 		.thanks_content p{
 			color: #404040;
 		}
-		.thanks-in .modal_title::before{
+		.thanks_content .modal_title::before{
 			display: none;
 		}
 		.modal-close-ic{

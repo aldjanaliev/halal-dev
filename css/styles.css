@@ -5510,7 +5510,11 @@ footer:before {
   background-color: #B5B5B5;
   border-color: #B5B5B5;
   cursor: default;
-  pointer-events: none;
+}
+
+.compare_slider-main .slick-disabled:hover {
+  background-color: #B5B5B5;
+  border-color: #B5B5B5;
 }
 
 @media (max-width: 768px) {
@@ -5700,6 +5704,10 @@ footer:before {
   .compare .compare_slider-wrap.active {
     top: 56px;
   }
+}
+
+.compare .compare_slider-wrap.active .catalog-item__image {
+  overflow: hidden;
 }
 
 .compare .compare_slider-wrap.active .compare_slider-main {
@@ -6243,7 +6251,7 @@ footer:before {
   border-radius: 50%;
   width: 136px;
   height: 136px;
-  margin: 0 auto;
+  margin: 88px auto 0;
   background: #00AF70 url(../images/success-big.png) center no-repeat;
 }
 
@@ -6355,7 +6363,7 @@ footer:before {
   .modal_white .thanks_content p {
     color: #404040;
   }
-  .modal_white .thanks-in .modal_title::before {
+  .modal_white .thanks_content .modal_title::before {
     display: none;
   }
   .modal_white .modal-close-ic {
