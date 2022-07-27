@@ -546,5 +546,18 @@ $(document).ready(function () {
 		thisParent.find('.currience_title__active').removeClass('currience_title__active')
 	})
 
+	$(".black-modal").fancybox({ 
+		beforeLoad: function() {
+			$('body').addClass('black')
+		},
+		afterClose: function(){
+			setTimeout(function(){
+				if(!$('body').hasClass('fancybox-active')){
+					$('body').removeClass('black')
+				}
+			},500)
+		}
+	});
+	console.log($('a[href="#modal-data"]'))
 
 });

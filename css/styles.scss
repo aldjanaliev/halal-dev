@@ -4337,6 +4337,7 @@ footer {
 		}
 		&__image{
 			padding: 0 13px 0 12px;
+			display: block;
 			img{
 				display: block;
 				max-width: 100%;
@@ -4582,6 +4583,7 @@ footer {
 					}
 				}
 				&__content-wrap{
+					height: 100%;
 					padding: 0;
 				}
 				&__image{
@@ -4589,6 +4591,7 @@ footer {
 				}
 				&__content{
 					padding-bottom: 30px;
+					height: 100%;
 					@include breakpoint($maxWidth: 768px) {
 						padding-bottom: 14px;
 					}
@@ -4663,8 +4666,8 @@ footer {
 				width: 7px;
 				height: 7px;
 				top: 50%;
-				right: 0;
-				transform: translate(50%, -50%);
+				left: 0;
+				transform: translate(-50%, -50%);
 				background: #EFEFEF;
 				border-radius: 50%;
 			}
@@ -4763,6 +4766,9 @@ footer {
 	.slick-current .catalog-item__content,
 	.compare_slider-nav .slick-current .item{
 		border-left-color: transparent;
+		&::before{
+			display: none;
+		}
 	}
 }
 .currience-choose{
@@ -4854,9 +4860,6 @@ footer {
 				padding-top: 250px;
 			}
 		}
-		.catalog-item__content::before{
-			display: none;
-		}
 	}
 }
 .wide{
@@ -4904,6 +4907,10 @@ footer {
 	max-width: 750px;
 	@include breakpoint($maxWidth: 778px) {
 		max-width: calc(100% - 40px);
+		.modal-in{
+			max-width: 355px;
+			margin: 0 auto;
+		}
 	}
 	.modal-close-ic{
 		display: none;
@@ -4933,7 +4940,14 @@ footer {
 	}
 	.btn-center .btn{
 		@include breakpoint($maxWidth: 778px) {
-			max-width: 295px;
+			max-width: 100%;
+			width: 100%;
+			&::before{
+				left: 87px;
+			}
+			&::after{
+				right: 87px;
+			}
 		}
 	}
 }
@@ -4964,8 +4978,20 @@ footer {
 			}
 		}
 	}
+	@include breakpoint($maxWidth: 778px) {
+		.modal_body::before{
+			display: none;
+		}
+	}
 }
 .fancybox-is-open .fancybox-bg{
+	background: rgba(0, 0, 0, 0.9);
+	@include breakpoint($maxWidth: 778px) {
+		background: #fff;
+		opacity: 1;
+	}
+}
+.black .fancybox-is-open .fancybox-bg{
 	background: rgba(0, 0, 0, 0.9);
 }
 .fancybox-container{
@@ -4979,10 +5005,6 @@ footer {
 		padding: 0;
 	}
 	.modal_white{
-		background: #fff!important;
-		max-width: 100%;
-		min-height: 100vh;
-		padding: 20px;
 		.modal_body{
 			position: relative;
 			&::before{
@@ -5012,12 +5034,6 @@ footer {
 				left: 50%;
 				transform: translateX(-50%);
 			}
-		}
-		.modal-in{
-			justify-content: center;
-			display: flex;
-			flex-direction: column;
-			height: 100%;
 		}
 		.form-group input{
 			border-color: #efefef;
