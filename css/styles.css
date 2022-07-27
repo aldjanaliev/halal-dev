@@ -2142,7 +2142,6 @@ header .logo-mobile svg:hover {
   width: 100%;
   position: relative;
   height: 320px;
-  overflow: hidden;
 }
 
 @media (max-width: 992px) {

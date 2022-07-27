@@ -1771,7 +1771,6 @@ header {
     width: 100%;
     position: relative;
     height: 320px;
-		overflow: hidden;
     @include breakpoint($maxWidth: 992px) {
       height: 250px;
     }
