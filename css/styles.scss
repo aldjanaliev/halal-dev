@@ -4915,6 +4915,7 @@ footer {
 		.modal-in{
 			max-width: 355px;
 			margin: 0 auto;
+			padding: 10px 0;
 		}
 	}
 	.modal-close-ic{
@@ -4980,6 +4981,9 @@ footer {
 			}
 			.modal_title{
 				padding-bottom: 21px;
+				@include breakpoint($maxWidth: 778px) {
+					font-size: 28px;
+				}
 			}
 		}
 	}
@@ -5072,9 +5076,9 @@ footer {
 		.modal-close-ic{
 			display: block;
 			position: absolute;
-			width: 18px;
-			height: 18px;
-			right: 0;
+			width: 20px;
+			height: 20px;
+			right: 10px;
 			top: 12px;
 			z-index: 100;
 			background: url(../images/fancy-close.png) center no-repeat;
