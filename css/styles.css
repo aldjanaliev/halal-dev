@@ -6694,3 +6694,9 @@ footer:before {
     display: block;
   }
 }
+
+.catalog_in-slider,
+.catalog_in-slider div,
+.catalog_in-slider a {
+  z-index: 0;
+}
