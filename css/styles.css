@@ -6696,7 +6696,6 @@ footer:before {
 }
 
 .catalog_in-slider,
-.catalog_in-slider div,
-.catalog_in-slider a {
+.catalog_in-slider * {
   z-index: 0;
 }
