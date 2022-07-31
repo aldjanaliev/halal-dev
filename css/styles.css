@@ -6181,7 +6181,8 @@ footer:before {
 
 @media (max-width: 778px) {
   .modal {
-    max-width: calc(100% - 40px);
+    max-width: 375px;
+    padding: 0 20px;
   }
   .modal .modal-in {
     max-width: 355px;
@@ -6244,7 +6245,7 @@ footer:before {
 
 @media (max-width: 778px) {
   .modal-thanks {
-    max-width: 340px;
+    max-width: 375px;
   }
 }
 

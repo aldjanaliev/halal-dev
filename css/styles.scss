@@ -4911,7 +4911,8 @@ footer {
 	width: 100%;
 	max-width: 750px;
 	@include breakpoint($maxWidth: 778px) {
-		max-width: calc(100% - 40px);
+		max-width: 375px;
+		padding: 0 20px;
 		.modal-in{
 			max-width: 355px;
 			margin: 0 auto;
@@ -4960,7 +4961,7 @@ footer {
 .modal-thanks{
 	max-width: 490px;
 	@include breakpoint($maxWidth: 778px) {
-		max-width: 340px;
+		max-width: 375px;
 	}
 	.thanks{
 		&_ic{
