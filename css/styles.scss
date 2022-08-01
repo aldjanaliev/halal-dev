@@ -1219,7 +1219,7 @@ header {
 }
 .search-wrap{
 	position: relative;
-	z-index: 150;
+	z-index: 90;
 	&.active{
 		.item{
 			width: 20%;
@@ -4962,6 +4962,32 @@ footer {
 	max-width: 490px;
 	@include breakpoint($maxWidth: 778px) {
 		max-width: 375px;
+		.thanks-top{
+			position: relative;
+		}
+		.thanks-top::before{
+			content: '';
+			position: absolute;
+			width: 23px;
+			height: 34px;
+			left: 0;
+			top: 0;
+			background: url(../images/logo-min.png) center no-repeat;
+			background-size: 100% 100%;
+		}
+		.modal-close-ic{
+			display: block;
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			right: 10px;
+			top: 12px;
+			z-index: 100;
+			background: url(../images/fancy-close.png) center no-repeat;
+			background-size: 100% 100%;
+			border: none;
+			cursor: pointer;
+		}
 	}
 	.thanks{
 		&_ic{
@@ -5058,6 +5084,12 @@ footer {
 			color: #404040;
 			position: relative;
 		}
+		.thanks_content p{
+			color: #404040;
+		}
+		.thanks_content .modal_title::before{
+			display: none;
+		}
 		.modal_title::before{
 			content: '';
 			position: absolute;
@@ -5067,12 +5099,6 @@ footer {
 			top: 0;
 			background: url(../images/logo-min.png) center no-repeat;
 			background-size: 100% 100%;
-		}
-		.thanks_content p{
-			color: #404040;
-		}
-		.thanks_content .modal_title::before{
-			display: none;
 		}
 		.modal-close-ic{
 			display: block;

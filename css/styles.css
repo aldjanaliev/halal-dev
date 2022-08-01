@@ -1489,7 +1489,7 @@ header .logo-mobile svg:hover {
 
 .search-wrap {
   position: relative;
-  z-index: 150;
+  z-index: 90;
 }
 
 .search-wrap.active .item {
@@ -6247,6 +6247,32 @@ footer:before {
   .modal-thanks {
     max-width: 375px;
   }
+  .modal-thanks .thanks-top {
+    position: relative;
+  }
+  .modal-thanks .thanks-top::before {
+    content: '';
+    position: absolute;
+    width: 23px;
+    height: 34px;
+    left: 0;
+    top: 0;
+    background: url(../images/logo-min.png) center no-repeat;
+    background-size: 100% 100%;
+  }
+  .modal-thanks .modal-close-ic {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: 12px;
+    z-index: 100;
+    background: url(../images/fancy-close.png) center no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    cursor: pointer;
+  }
 }
 
 .modal-thanks .thanks_ic {
@@ -6358,6 +6384,12 @@ footer:before {
     color: #404040;
     position: relative;
   }
+  .modal_white .thanks_content p {
+    color: #404040;
+  }
+  .modal_white .thanks_content .modal_title::before {
+    display: none;
+  }
   .modal_white .modal_title::before {
     content: '';
     position: absolute;
@@ -6367,12 +6399,6 @@ footer:before {
     top: 0;
     background: url(../images/logo-min.png) center no-repeat;
     background-size: 100% 100%;
-  }
-  .modal_white .thanks_content p {
-    color: #404040;
-  }
-  .modal_white .thanks_content .modal_title::before {
-    display: none;
   }
   .modal_white .modal-close-ic {
     display: block;
