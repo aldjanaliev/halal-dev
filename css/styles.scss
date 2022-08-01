@@ -5359,6 +5359,16 @@ footer {
 }
 
 .catalog_in-slider,
-.catalog_in-slider *{
+.catalog-slider,
+.catalog-slider .item,
+.catalog-slider .slick-track,
+.catalog-slider .slick-list,
+.catalog-slider .slick-slide,
+.catalog-slider .slick-slide > div,
+.catalog-slider .catalog-item,
+.catalog-slider .catalog-item__image{
 	z-index: 0;
+}
+.catalog-slider .slick-dots{
+	z-index: 1;
 }
