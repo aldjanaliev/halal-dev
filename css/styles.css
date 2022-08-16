@@ -3486,12 +3486,15 @@ footer:before {
 
 .detail .detail-main .slick-dots {
   position: absolute;
-  bottom: -4px;
-  right: 0;
+  bottom: 100px;
+  left: 50%;
+  margin-left: 587px;
+  display: block;
+  width: auto;
 }
 
 .detail .detail-main .slick-dots li {
-  margin: 0 0 0 20px;
+  margin: 0 10px;
 }
 
 @media (max-width: 768px) {
@@ -6735,4 +6738,59 @@ footer:before {
 
 .catalog-slider .slick-dots {
   z-index: 1;
+}
+
+.detail_slider {
+  position: relative;
+}
+
+.detail_dots {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .detail_dots {
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    bottom: auto;
+    top: 350px;
+  }
+}
+
+.detail_dots .dots_btn {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border-width: 3px;
+  border: 3px solid #fff;
+  margin-left: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.detail_dots .dots_btn.active {
+  background: #00AF70;
+}
+
+@media (max-width: 768px) {
+  .detail_dots .dots_btn {
+    margin: 0 6px;
+    width: 12px;
+    height: 12px;
+    border-width: 2px;
+  }
+}
+
+.detail .detail-main .slick-dots {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .section-image img {
+    height: 600px;
+  }
 }

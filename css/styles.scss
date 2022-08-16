@@ -2968,10 +2968,13 @@ footer {
 		padding-bottom: 0!important;
 		.slick-dots{
 			position: absolute;
-			bottom: -4px;
-			right: 0;
+			bottom: 100px;
+			left: 50%;
+			margin-left: 587px;
+			display: block;
+			width: auto;
 			li{
-				margin: 0 0 0 20px;
+				margin: 0 10px;
 				@include breakpoint($maxWidth: 768px) {
 					margin: 0 5px;
 				}
@@ -5371,4 +5374,45 @@ footer {
 }
 .catalog-slider .slick-dots{
 	z-index: 1;
+}
+.detail_slider{
+	position: relative;
+}
+.detail_dots{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	@include breakpoint($maxWidth: 768px) {
+		right: 50%;
+		transform: translateX(50%);
+		bottom: auto;
+		top: 350px;
+	}
+	.dots_btn{
+		border-radius: 50%;
+		width: 20px;
+    height: 20px;
+    border-width: 3px;
+		border: 3px solid #fff;
+		margin-left: 20px;
+		cursor: pointer;
+		transition: 0.3s;
+		&.active{
+			background: #00AF70;
+		}
+		@include breakpoint($maxWidth: 768px) {
+			margin: 0 6px;
+			width: 12px;
+			height: 12px;
+			border-width: 2px;
+		}
+	}
+}
+.detail .detail-main .slick-dots{
+	display: none!important;
+}
+.section-image img{
+	@include breakpoint($maxWidth: 768px) {
+		height: 600px;
+	}
 }

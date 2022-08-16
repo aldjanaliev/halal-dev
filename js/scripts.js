@@ -274,12 +274,34 @@ $(document).ready(function () {
 		$('.layout_nav-current').text(currentSlide + 1)
 	});
 
-	$('.detail_slider').slick({
+	$('.image_slider').slick({
 		dots: true,
-    infinite: true,
+    infinite: false,
 		arrows: false,
+		fade: true,
     // speed: 500,
 	})
+
+	if($('.image_slider').length > 0){
+		let dotsCount = $('.image_slider').find('.slick-dots li').length
+		if(dotsCount > 1){
+			for(let i = 1; i <= dotsCount; i++){
+				$('.detail_dots').append(`<button class="dots_btn"></button>`)
+			}
+			$('.detail_dots').find('.dots_btn').eq(0).addClass('active')
+		}
+		
+		$('.dots_btn').on('click', function(){
+			if(!$(this).hasClass('active')){
+				$('.dots_btn.active').removeClass('active')
+				$(this).addClass('active')
+				let btnIndex = $(this).index()
+				$('.image_slider').find('.slick-dots li').eq(btnIndex).find('button').click()
+			}
+		})
+	}
+
+
 
 	$('.order_slider').slick({
 		dots: false,
