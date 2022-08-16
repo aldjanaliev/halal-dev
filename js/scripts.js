@@ -279,7 +279,9 @@ $(document).ready(function () {
     infinite: false,
 		arrows: false,
 		fade: true,
-    // speed: 500,
+		autoplay: true,
+  	autoplaySpeed: 5000,
+    speed: 800,
 	})
 
 	if($('.image_slider').length > 0){
