@@ -274,7 +274,7 @@ $(document).ready(function () {
 		dots: true,
 		arrows: false,
 		fade: true,
-		autoplay: true,
+		// autoplay: true,
   	autoplaySpeed: 5000,
     speed: 800,
 		pauseOnFocus: false,

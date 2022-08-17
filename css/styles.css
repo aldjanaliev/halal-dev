@@ -6794,3 +6794,11 @@ footer:before {
     height: 600px;
   }
 }
+
+.image_slider .slick-list,
+.image_slider .slick-track,
+.image_slider .slick-slide,
+.image_slider .slick-slide > div,
+.image_slider .section-image_slide {
+  height: 100%;
+}
