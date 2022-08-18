@@ -6802,3 +6802,7 @@ footer:before {
 .image_slider .section-image_slide {
   height: 100%;
 }
+
+.detail .catalog_in-slider {
+  overflow: hidden;
+}
